@@ -11,16 +11,16 @@
 
 / {
         behaviors {
-            td_skmo: tap_dance_mod_tap {
+            td_skmo: tap_dance_sk_hold_shift {
                 compatible = "zmk,behavior-tap-dance";
-                label = "TAP_DANCE_SK_MO";
+                label = "TAP_DANCE_SK_HOLD_CTRL";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
                 bindings = <&sk LSHIFT>, <&mo 1>;
             };
-            td_skmoctl: tap_dance_mod_tap {
+            td_skmoctl: tap_dance_sk_hold_ctrl {
                 compatible = "zmk,behavior-tap-dance";
-                label = "TAP_DANCE_SK_MO_CTL";
+                label = "TAP_DANCE_SK_HOLD_CTL";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
                 bindings = <&sk RCTRL>, <&mo 2>;
