@@ -13,7 +13,7 @@
         behaviors {
             sm: hold_tap_sk_mo {
               compatible = "zmk,behavior-hold-tap";
-              label = "HOLD_TAP_SK_MO;
+              label = "HOLD_TAP_SK_MO";
               bindings = <&sk>, <&mo>;
             };
             td_skmo: tap_dance_sk_hold_shift {
