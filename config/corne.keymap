@@ -11,12 +11,17 @@
 
 / {
         behaviors {
+            sm: hold_tap_sk_mo {
+              compatible = "zmk,behavior-hold-tap";
+              label = "HOLD_TAP_SK_MO;
+              bindings = <&sk>, <&mo>;
+            };
             td_skmo: tap_dance_sk_hold_shift {
                 compatible = "zmk,behavior-tap-dance";
                 label = "TAP_DANCE_SK_HOLD_CTRL";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&sk LSHIFT>, <&mo 1>;
+                bindings = <&sk LSHFT>, <&mo 1>;
             };
             td_skmoctl: tap_dance_sk_hold_ctrl {
                 compatible = "zmk,behavior-tap-dance";
@@ -36,10 +41,10 @@
 // | SHFT |  Y  |  X  |  C  |  V  |  B  |     |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |     | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB   &kp Q     &kp W       &kp E      &kp R      &kp T           &kp DE_Z     &kp U       &kp I       &kp O        &kp P    &kp BSPC
-   &kp LCTRL &kp A     &mt LSHFT S &mt LGUI D &mt LALT F &mt LCTRL G     &mt RCTRL H  &mt LALT J  &mt RGUI K  &mt RSHFT L  &kp SEMI &kp SQT
-   &kp LSHFT &kp DE_Y  &kp X       &kp C      &kp V      &kp B           &kp N        &mt RALT M  &kp COMMA   &kp DOT      &kp FSLH &kp ESC
-                                   &kp BSPC   &td_skmo   &kp SPACE       &kp RET      &td_skmoctl  &kp ESC
+   &kp TAB   &kp Q     &kp W       &kp E      &kp R        &kp T           &kp DE_Z     &kp U        &kp I       &kp O        &kp P    &kp BSPC
+   &kp LCTRL &kp A     &mt LSHFT S &mt LGUI D &mt LALT F   &mt LCTRL G     &mt RCTRL H  &mt LALT J   &mt RGUI K  &mt RSHFT L  &kp SEMI &kp SQT
+   &kp LSHFT &kp DE_Y  &kp X       &kp C      &kp V        &kp B           &kp N        &mt RALT M   &kp COMMA   &kp DOT      &kp FSLH &kp ESC
+                                   &kp BSPC   &sm LSHFT 1  &kp SPACE       &kp RET      &sm RCTRL 2  &kp ESC
                         >;
                 };
                 lower_layer {
