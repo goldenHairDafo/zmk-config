@@ -17,6 +17,9 @@
 #define MOUSE 6
 #define SYSTEM 4
 
+&sk {
+    quick-release;
+};
 &sl {
     release-after-ms = <5000>;
 };
@@ -63,10 +66,10 @@
 // | ? |  '  |  >  |  )  |  }  |  ]  |     |  $  |  &  |  |  |  #  |  ~  | SynReq    |
 //                 | BSP | SPC | LSH |     | LCT | RET | ESC |
                         bindings = <
-   &kp DE_CARET  &kp N1      &kp N2     &kp N3       &kp N4     &kp N5           &kp N6        &kp N7       &kp N8       &kp N9        &kp N0        &kp DE_AT
-   &kp DE_EXCL   &kp DE_DQT  &kp DE_LT  &kp DE_LPAR  &kp LBRC   &kp DE_LBKT      &kp DE_PRCNT  &kp DE_STAR  &kp DE_PLUS  &kp DE_EQUAL  &kp DE_BSLH   &sl EXTRA
-   &kp DE_QMARK  &kp DE_SQT  &kp DE_GT  &kp DE_RPAR  &kp RBRC   &kp DE_RBKT      &kp DE_DLLR   &kp DE_AMPS  &kp DE_PIPE  &kp DE_HASH   &kp DE_TILDE  &sl SYSTEM
-                                        &kp BSPC     &kp SPACE  &sk LSHFT        &sk LCTRL     &kp RET      &kp ESC
+   &kp DE_CARET  &kp N1      &kp N2     &kp N3       &kp N4       &kp N5           &kp N6        &kp N7       &kp N8       &kp N9        &kp N0        &kp DE_AT
+   &kp DE_EXCL   &kp DE_DQT  &kp DE_LT  &kp DE_LPAR  &kp DE_LBRC  &kp DE_LBKT      &kp DE_PRCNT  &kp DE_STAR  &kp DE_PLUS  &kp DE_EQUAL  &kp DE_BSLH   &sl EXTRA
+   &kp DE_QMARK  &kp DE_SQT  &kp DE_GT  &kp DE_RPAR  &kp DE_RBRC  &kp DE_RBKT      &kp DE_DLLR   &kp DE_AMPS  &kp DE_PIPE  &kp DE_HASH   &kp DE_TILDE  &sl SYSTEM
+                                        &kp BSPC     &kp SPACE    &sk LSHFT        &sk LCTRL     &kp RET      &kp ESC
                         >;
                 };
                 extra_layer {
