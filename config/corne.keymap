@@ -55,8 +55,8 @@
                         bindings = <
    &kp LALT   &kp DE_Q  &kp W       &kp DE_E   &kp R        &kp T           &kp DE_Z     &kp U        &kp I          &kp O        &kp P         &caps_word
    &kp TAB    &kp A     &hm LSHFT S &hm LGUI D &mt LALT F   &hm LCTRL G     &hm RCTRL H  &hm LALT J   &hm RGUI K     &hm RSHFT L  &kp DE_FSLH   &sl SYMBOL
-   &sl UMLAUT &kp DE_Y  &kp X       &kp C      &kp V        &kp B           &kp N        &mt RALT M   &kp DE_COMMA   &kp DE_DOT   &kp DE_MINUS  &sl UMLAUT
-                                    &kp BSPC   &kp SPACE    &sk LSHFT       &sk LCTRL    &kp RET      &kp ESC
+   &sl UMLAUT &kp DE_Y  &kp X       &kp C      &kp V        &kp B           &kp N        &hm RALT M   &kp DE_COMMA   &kp DE_DOT   &kp DE_MINUS  &sl UMLAUT
+                                    &kp BSPC   &kp SPACE    &sk LSHFT       &sk RCTRL    &kp RET      &kp ESC
                         >;
                 };
                 symbols_layer {
@@ -116,6 +116,10 @@
 };
 
 // TODOs
-// Mouse Assist Layer
-// Gaming Layer
-// Macro for domain name
+// [ ] Navigration Layer
+// [ ] Mouse Movement Layer
+// [ ] Function Key Layer
+// [ ] Media Key Layer
+// [ ] Mouse Assist Layer
+// [ ] Gaming Layer
+// [ ] Macro for domain name
