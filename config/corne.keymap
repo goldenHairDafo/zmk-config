@@ -52,12 +52,12 @@
                         bindings = <
    &kp DE_CARET  &kp N1      &kp N2     &kp N3       &kp N4     &kp N5           &kp N6        &kp N7       &kp N8       &kp N9        &kp N0        &kp DE_AT
    &kp DE_EXCL   &kp DE_DQT  &kp DE_LT  &kp DE_LPAR  &kp LBRC   &kp DE_LBKT      &kp DE_PRCNT  &kp DE_STAR  &kp DE_PLUS  &kp DE_EQUAL  &kp DE_BSLH   &sl EXTRA
-   &kp DE_QMARK  &kp DE_SQT  &kp DE_GT  &kp DE_RPAR  &kp RBRC   &kp DE_RBKT      &kp DE_DLLR   &kp DE_AMPS  &kp DE_PIPE  &DE_HASH      &kp DE_TILDE  &sl SYSTEM
+   &kp DE_QMARK  &kp DE_SQT  &kp DE_GT  &kp DE_RPAR  &kp RBRC   &kp DE_RBKT      &kp DE_DLLR   &kp DE_AMPS  &kp DE_PIPE  &kp DE_HASH   &kp DE_TILDE  &sl SYSTEM
                                         &kp BSPC     &kp SPACE  &sk LSHFT        &sk RCTRL     &kp RET      &kp ESC
                         >;
                 };
                 extra_layer {
-// -----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 // | ° |  1  |  2  |  3  |  4  |  5  |     |  6  |  7  |  8  |  9  |  0  |  @  |
 // | ! |  "  |  <  |  (  |  {  |  [  |     |  %  |  *  |  +  |  =  |  \  |     |
 // | ? |  `  |  >  |  )  |  }  |  ]  |     |  €  |  µ  |  |  |  #  |  ~  |     |
@@ -65,7 +65,7 @@
                         bindings = <
    &kp DE_DEG    &kp N1        &kp N2     &kp N3       &kp N4     &kp N5           &kp N6        &kp N7       &kp N8       &kp N9        &kp N0        &kp DE_AT
    &kp DE_EXCL   &kp DE_DQT    &kp DE_LT  &kp DE_LPAR  &kp LBRC   &kp DE_LBKT      &kp DE_PRCNT  &kp DE_STAR  &kp DE_PLUS  &kp DE_EQUAL  &kp DE_BSLH   &none
-   &kp DE_QMARK  &kp DE_GRAVE  &kp DE_GT  &kp DE_RPAR  &kp RBRC   &kp DE_RBKT      &kp DE_EURO   &kp DE_AMPS  &kp DE_PIPE  &DE_HASH      &kp DE_TILDE  &none
+   &kp DE_QMARK  &kp DE_GRAVE  &kp DE_GT  &kp DE_RPAR  &kp RBRC   &kp DE_RBKT      &kp DE_EURO   &kp DE_AMPS  &kp DE_PIPE  &kp DE_HASH   &kp DE_TILDE  &none
                                           &kp BSPC     &kp SPACE  &sk LSHFT        &sk RCTRL     &kp RET      &kp ESC
                         >;
                 };
@@ -77,7 +77,7 @@
 // |   |     |     |     |     |     |       |     |     |     |     |     |      |
 //                 | BSP | SPC | LSH |       | LCT | RET | ESC |
                         bindings = <
-   &trans  &kp DE_AT        &trans     &kp DE_EURO  &trans     &trans           &trans     &kp DE_UMLAUT_U  &trans   &kp DE_UMLAUT_O  &kp LS(DE_N3)  &trans
+   &trans  &kp DE_AT        &trans     &kp DE_EURO  &trans     &trans           &trans     &kp DE_U_UMLAUT  &trans   &kp DE_O_UMLAUT  &kp LS(DE_N3)  &trans
    &trans  &kp DE_A_UMLAUT  &kp DE_SZ  &trans       &trans     &trans           &trans     &trans           &trans   &trans           &trans         &trans
    &trans  &trans           &trans     &trans       &trans     &trans           &trans     &trans           &trans   &trans           &trans         &trans
                                        &kp BSPC     &kp SPACE  &sk LSHFT        &sk RCTRL  &kp RET          &kp ESC
