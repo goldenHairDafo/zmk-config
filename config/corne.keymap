@@ -17,12 +17,13 @@
 #define MOUSE 6
 #define SYSTEM 4
 
+&sl {
+    release-after-ms = <5000>;
+};
+
 / {
-        &sl {
-            release-after-ms = <5000>;
-        };
         behaviors {
-            hm: home_row_mod {
+            hm: home_row_mods {
                   compatible = "zmk,behavior-hold-tap";
                   label = "HOMEROW_MODS";
                   #binding-cells = <2>;
