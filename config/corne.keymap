@@ -18,13 +18,25 @@
 #define SYSTEM 4
 
 / {
+        &sl {
+            release-after-ms = <5000>;
+        };
         behaviors {
+            hm: home_row_mod {
+                  compatible = "zmk,behavior-hold-tap";
+                  label = "HOMEROW_MODS";
+                  #binding-cells = <2>;
+                  tapping-term-ms = <150>;
+                  quick-tap-ms = <0>;
+                  flavor = "tap-preferred";
+                  bindings = <&kp>, <&kp>;
+            };
             sm: hold_tap_sk_mo {
-              compatible = "zmk,behavior-hold-tap";
-              label = "HOLD_TAP_SK_MO";
-              #binding-cells = <2>;
-              tapping-term-ms = <300>;
-              bindings = <&mo>, <&sk>;
+                  compatible = "zmk,behavior-hold-tap";
+                  label = "HOLD_TAP_SK_MO";
+                  #binding-cells = <2>;
+                  tapping-term-ms = <300>;
+                  bindings = <&mo>, <&sk>;
             };
         };
         keymap {
@@ -38,7 +50,7 @@
 //                         | BSP | SPC | LSH |     | LCT | RET  | ESC |
                         bindings = <
    &kp LALT   &kp DE_Q  &kp W       &kp DE_E   &kp R        &kp T           &kp DE_Z     &kp U        &kp I          &kp O        &kp P         &caps_word
-   &kp TAB    &kp A     &mt LSHFT S &mt LGUI D &mt LALT F   &mt LCTRL G     &mt RCTRL H  &mt LALT J   &mt RGUI K     &mt RSHFT L  &kp DE_FSLH   &sl SYMBOL
+   &kp TAB    &kp A     &hm LSHFT S &hm LGUI D &mt LALT F   &hm LCTRL G     &hm RCTRL H  &hm LALT J   &hm RGUI K     &hm RSHFT L  &kp DE_FSLH   &sl SYMBOL
    &sl UMLAUT &kp DE_Y  &kp X       &kp C      &kp V        &kp B           &kp N        &mt RALT M   &kp DE_COMMA   &kp DE_DOT   &kp DE_MINUS  &sl UMLAUT
                                     &kp BSPC   &kp SPACE    &sk LSHFT       &sk RCTRL    &kp RET      &kp ESC
                         >;
