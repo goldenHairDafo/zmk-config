@@ -47,7 +47,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                    label = "Base Layer";
+                    label = "Base";
 // -----------------------------------------------------------------------------------------------------
 // | ALT       |  Q  |  W  |  E  |  R  |  T  |     |  Z  |  U   |  I  |  O  |  P          | CAPS_WORD  |
 // | TAB       |  A  |  S  |  D  |  F  |  G  |     |  H  |  J   |  K  |  L  |  sl SYMBOL  | sl SYMBOL  |
@@ -61,35 +61,35 @@
                         >;
                 };
                 symbols_layer {
-                    label = "Numbers and Symbols";
+                    label = "Sym";
 // ------------------------------------------------------------------------------------------
 // | ^ |  1  |  2  |  3  |  4  |  5  |     |  6  |  7  |  8  |  9  |  0         | @         |
 // | ! |  "  |  <  |  (  |  {  |  [  |     |  /  |  *  |  +  |  =  |  sl EXTRA  | sl EXTRA  |
 // | ? |  '  |  >  |  )  |  }  |  ]  |     |  $  |  &  |  |  |  #  |  SynReq    | SynReq    |
 //                 | BSP | SPC | LSH |     | LCT | RET | ESC |
                         bindings = <
-   &kp DE_CARET  &kp N1      &kp N2     &kp N3       &kp N4       &kp N5           &kp N6       &kp N7       &kp N8       &kp N9        &kp N0        &kp DE_AT
-   &kp DE_EXCL   &kp DE_DQT  &kp DE_LT  &kp DE_LPAR  &kp DE_LBRC  &kp DE_LBKT      &kp DE_FSLH  &kp DE_STAR  &kp DE_PLUS  &kp DE_EQUAL  &sl EXTRA     &sl EXTRA
-   &kp DE_QMARK  &kp DE_SQT  &kp DE_GT  &kp DE_RPAR  &kp DE_RBRC  &kp DE_RBKT      &kp DE_DLLR  &kp DE_AMPS  &kp DE_PIPE  &kp DE_HASH   &kp DE_TILDE  &sl SYSTEM
-                                        &kp ESC      &lt NAV SPACE  &sk LSHFT      &sk RCTRL    &kp RET      &kp BSPC
+   &kp DE_CARET  &kp N1      &kp N2           &kp N3            &kp N4            &kp N5                 &kp N6       &kp N7       &kp N8       &kp N9        &kp N0        &kp DE_AT
+   &kp DE_EXCL   &kp DE_DQT  &hm LSHFT DE_LT  &hm LGUI DE_LPAR  &hm LALT DE_LBRC  &hm LCTRL DE_LBKT      &hm RCTRL DE_FSLH  &hm LALT DE_STAR  &hm RGUI DE_PLUS  &hm RSHFT DE_EQUAL  &sl EXTRA     &sl EXTRA
+   &kp DE_QMARK  &kp DE_SQT  &kp DE_GT        &kp DE_RPAR       &kp DE_RBRC       &kp DE_RBKT            &kp DE_DLLR  &kp DE_AMPS  &kp DE_PIPE  &kp DE_HASH   &kp DE_TILDE  &sl SYSTEM
+                                              &kp ESC           &lt NAV SPACE     &sk LSHFT              &sk RCTRL    &kp RET      &kp BSPC
                         >;
                 };
                 extra_layer {
-                    label = "Extra Symbols";
+                    label = "Extra";
 // -----------------------------------------------------------------------------
 // | ° |  1  |  2  |  3  |  4  |  5  |     |  6  |  7  |  8  |  9  |  0  |  @  |
-// | ! |  "  |  <  |  )  |    |  ]  |     |  \  |  *  |  %  |  ~  |     |     |
-// | ? |  `  |  >  |  )  |    |  ]  |     |  €  |  µ  |  |  |  ?  |  !  |     |
+// | ! |  "  |  <  |  )  |     |  ]  |     |  \  |  *  |  %  |  ~  |     |     |
+// | ? |  `  |  >  |  )  |     |  ]  |     |  €  |  µ  |  |  |  ?  |  !  |     |
 //                 | BSP | SPC | LSH |     | LCT | RET | ESC |
                         bindings = <
-   &kp DE_DEG    &kp N1        &kp N2     &kp N3       &kp N4        &kp N5           &kp N6       &kp N7       &kp N8        &kp N9        &kp N0       &kp DE_AT
-   &kp DE_EXCL   &kp DE_DQT    &kp DE_GT  &kp DE_RPAR  &kp DE_RBRC   &kp DE_RBKT      &kp DE_BSLH  &kp DE_STAR  &kp DE_PRCNT  &kp DE_TILDE  &kp DE_BSLH  &none
-   &kp DE_QMARK  &kp DE_GRAVE  &kp DE_GT  &kp DE_RPAR  &kp DE_RBRC   &kp DE_RBKT      &kp DE_EURO  &kp DE_AMPS  &kp DE_PIPE   &kp DE_QMARK  &kp DE_EXCL  &none
-                                          &kp ESC      &lt NAV SPACE  &sk LSHFT       &sk RCTRL    &kp RET      &kp BSPC
+   &kp DE_DEG    &kp N1        &kp N2           &kp N3            &kp N4             &kp N5                 &kp N6       &kp N7       &kp N8        &kp N9        &kp N0       &kp DE_AT
+   &kp DE_EXCL   &kp DE_DQT    &hm LSHFT DE_GT  &hm LGUI DE_RPAR  &hm LALT DE_RBRC   &hm LCTRL DE_RBKT      &hm RCTRL DE_BSLH  &hm LALT DE_STAR  &hm RGUI DE_PRCNT  &hm RSHFT DE_TILDE  &kp DE_BSLH  &none
+   &kp DE_QMARK  &kp DE_GRAVE  &kp DE_GT        &kp DE_RPAR       &kp DE_RBRC        &kp DE_RBKT            &kp DE_EURO  &kp DE_AMPS  &kp DE_PIPE   &kp DE_QMARK  &kp DE_EXCL  &none
+                                                &kp ESC           &lt NAV SPACE      &sk LSHFT              &sk RCTRL    &kp RET      &kp BSPC
                         >;
                 };
                 umlaut_layer {
-                    label = "EuroKeys";
+                    label = "Euro";
 // --------------------------------------------------------------------------------
 // |   |  @  |     |  €  |     |     |       |     |  ü  |     |  ö  |  §  |      |
 // |   |  ä  |  ß  |     |     |     |       |     |     |     |     |     |      |
@@ -103,24 +103,24 @@
                         >;
                 };
                 navigation_layer {
-                    label = "Navigation";
-// -------------------------------------------------------------------------------------
-// |   |     |     |     |     |     |       | REDO | UNDO  | COPY | CUT | PAST |      |
-// |   |     |     |     |     |     |       |   <  |  v    |  ^   |  >  | TAB  |      |
-// |   |     |     |     |     |     |       | HOME | PDOWN | PUP  | END |      |      |
+                    label = "Nav";
+// ------------------------------------------------------------------------------------------
+// |   |     |     |     |     |     |       | REDO | UNDO  | COPY | CUT | PAST      |      |
+// |   |     |     |     |     |     |       |   <  |  v    |  ^   |  >  | TAB       |      |
+// |   |     |     |     |     |     |       | HOME | PDOWN | PUP  | END | CAPS_WORD |      |
 //                 | BSP | SPC | LSH |       | LCT | RET | ESC |
                         bindings = <
-   &trans  &trans  &trans  &trans  &trans   &trans           &kp LC(R)  &kp LC(Z)  &kp LC(INS)  &kp LS(DEL)  &kp LS(INS)  &trans
-   &trans  &trans  &trans  &trans  &trans   &trans           &kp LEFT   &kp DOWN   &kp UP       &kp RIGHT    &kp TAB      &trans
-   &trans  &trans  &trans  &trans  &trans   &trans           &kp HOME   &kp PG_DN  &kp PG_UP    &kp END      &caps_word   &trans
+   &trans  &trans  &trans  &trans  &trans   &trans           &kp LC(R)  &kp LC(DE_Z)  &kp LC(INS)  &kp LS(DEL)  &kp LS(INS)  &trans
+   &trans  &trans  &trans  &trans  &trans   &trans           &kp LEFT   &kp DOWN      &kp UP       &kp RIGHT    &kp TAB      &trans
+   &trans  &trans  &trans  &trans  &trans   &trans           &kp HOME   &kp PG_DN     &kp PG_UP    &kp END      &caps_word   &trans
                            &trans  &trans   &trans           &trans     &trans     &trans
                         >;
                 };
                 system_layer {
-                    label = "Keyborad Functions";
+                    label = "Corne";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+// | BTCLR| BT1 | BT2 | bt3 | bt4 | bT5 |   | LFT | DWN |  UP | RGT |     |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
