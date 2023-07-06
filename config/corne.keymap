@@ -18,7 +18,7 @@
 #define SYSTEM 6
 
 #define HYPER LA(LC(LS(LGUI)))
-#define MEH   LA(LC(LS(LGUI)))
+#define MEH   LA(LC(LSHFT))
 
 &sk {
     quick-release;
