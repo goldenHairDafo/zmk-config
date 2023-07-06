@@ -1,0 +1,68 @@
+#!/usr/bin/env zsh
+#
+# A very simple script to flash a new version of the
+# zmk-firmeware zu my corne keyboard
+#
+# (c) Copyright 2023 Dafo with golden Hair 
+# Licence MIT 
+#
+
+NICENANO_DIR=/run/media/$USER/NICENANO
+LEFT_FILE="corne_left nice_view_adapter nice_view-nice_nano_v2-zmk.uf2"
+RIGHT_FILE="corne_right nice_view_adapter nice_view-nice_nano_v2-zmk.uf2"
+
+# if the first parameter is empty us default archive name
+# otherwise use the parameter 
+if test -z "$1"
+then 
+  FIRMWARE=firmware.zip
+else
+  FIRMWARE=$1
+fi
+
+if test -e $FIRMWARE
+then
+  unzip -o $FIRMWARE
+  if test -e $FIRMWARE
+  then
+    mv $FIRMWARE ${FIRMWARE}_`date +%F_%T`
+  fi 
+else
+  echo Firmware file $FIRMWARE not found
+  exit 1
+fi
+
+echo Connect the left half and press reset twice.
+# wait until the drive for the nice nano it mounted
+while test ! -d $NICENANO_DIR
+do
+  sleep 2
+done
+if test -e $LEFT_FILE 
+then
+  cp $LEFT_FILE /run/media/holloway/NICENANO/.
+  echo done
+else
+  echo firmware file for the right half not found
+fi
+
+# check an wait until the nice nano is unmounted
+while test -d $NICENANO_DIR
+do
+  sleep 2
+done
+
+# wait until the drive for the nice nano it mounted
+echo Connect the right half and press reset twice.
+while test ! -d $NICENANO_DIR
+do
+  sleep 2
+done
+if test -e $RIGHT_FILE 
+then
+  cp $RIGHT_FILE /run/media/holloway/NICENANO/.
+  echo done
+else
+  echo firmware file for the right half not found
+fi
+
