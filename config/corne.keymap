@@ -57,10 +57,10 @@
 // | sl UMLAUT |  Y  |  X  |  C  |  V  |  B  |     |  N  |  M   |  ,  |  .  |  -  | sl UMLAUT  |
 //                         | BSP | SPC | LSH |     | LCT | RET  | ESC |
                         bindings = <
-   &kp LALT    &kp DE_Q         &kp W        &kp DE_E    &kp R          &kp T              &kp DE_Z    &kp U        &kp I          &kp O        &kp P                &none
-   &kp ESC     &hm LSHFT A      &hm LCTRL S  &hm LGUI D  &hm LALT F     &kp G              &kp H       &hm LALT J   &hm RGUI K     &hm RCTRL L  &hm RSHFT DE_DQT     &caps_word
-   &kp LGUI    &lt UMLAUT DE_Y  &kp X        &kp C       &kp V          &kp B              &kp N       &hm RALT M   &kp DE_COMMA   &kp DE_DOT   &lt UMLAUT DE_MINUS  &key_repeat
-                                             &kp ESC     &lt NAV SPACE  &sl EXTRA          &sl SYMBOL  &kp RET      &kp BSPC
+   &kp LALT    &kp DE_Q         &kp W        &kp DE_E    &kp R          &kp T              &kp DE_Z    &kp U         &kp I          &kp O        &kp P                &none
+   &kp ESC     &hm LSHFT A      &hm LCTRL S  &hm LGUI D  &hm LALT F     &kp G              &kp H       &hm LALT J    &hm RGUI K     &hm RCTRL L  &hm RSHFT DE_DQT     &caps_word
+   &kp LGUI    &lt UMLAUT DE_Y  &kp X        &kp C       &kp V          &kp B              &kp N       &hm RALT M    &kp DE_COMMA   &kp DE_DOT   &lt UMLAUT DE_MINUS  &key_repeat
+                                             &kp ESC     &lt NAV SPACE  &sl EXTRA          &sl SYMBOL  &lt FUNC RET  &kp BSPC
                         >;
                 };
                 symbols_layer {
