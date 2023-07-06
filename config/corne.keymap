@@ -18,7 +18,7 @@
 #define SYSTEM 6
 
 #define HYPER LA(LC(LS(LGUI)))
-#define MEH   LA(LC(LSHFT))
+#define MEH   LA(LC(LSHF))
 
 &sk {
     quick-release;
@@ -51,57 +51,57 @@
 
                 default_layer {
                     label = "Base";
-// -----------------------------------------------------------------------------------------------------
-// | ALT       |  Q  |  W  |  E  |  R  |  T  |     |  Z  |  U   |  I  |  O  |  P          | CAPS_WORD  |
-// | TAB       |  A  |  S  |  D  |  F  |  G  |     |  H  |  J   |  K  |  L  |  sl SYMBOL  | sl SYMBOL  |
-// | sl UMLAUT |  Y  |  X  |  C  |  V  |  B  |     |  N  |  M   |  ,  |  .  |  -          | sl UMLAUT  |
+// ---------------------------------------------------------------------------------------------
+// | ALT       |  Q  |  W  |  E  |  R  |  T  |     |  Z  |  U   |  I  |  O  |  P  | CAPS_WORD  |
+// | TAB       |  A  |  S  |  D  |  F  |  G  |     |  H  |  J   |  K  |  L  |  "  | sl SYMBOL  |
+// | sl UMLAUT |  Y  |  X  |  C  |  V  |  B  |     |  N  |  M   |  ,  |  .  |  -  | sl UMLAUT  |
 //                         | BSP | SPC | LSH |     | LCT | RET  | ESC |
                         bindings = <
-   &kp LALT    &kp DE_Q         &kp W       &kp DE_E    &kp R          &kp T              &kp DE_Z        &kp U        &kp I          &kp O        &kp P                &caps_word
-   &kp TAB     &kp A            &hm LSHFT S &hm LGUI D  &mt LALT F     &hm LCTRL G        &hm RCTRL H     &hm LALT J   &hm RGUI K     &hm RSHFT L  &sl SYMBOL           &sl SYMBOL
-   &sl UMLAUT  &lt UMLAUT DE_Y  &kp X       &kp C       &kp V          &kp B              &kp N           &hm RALT M   &kp DE_COMMA   &kp DE_DOT   &lt UMLAUT DE_MINUS  &sl UMLAUT
-                                            &kp ESC     &lt NAV SPACE  &sk LSHFT          &sm FUNC RCTRL  &kp RET      &kp BSPC
+   &kp LALT    &kp DE_Q         &kp W        &kp DE_E    &kp R          &kp T              &kp DE_Z    &kp U        &kp I          &kp O        &kp P                &none
+   &kp ESC     &hm LSHFT A      &hm LCTRL S  &hm LGUI D  &hm LALT F     &kp G              &kp H       &hm LALT J   &hm RGUI K     &hm RCTRL L  &hm RSHFT DE_DQT     &caps_word
+   &kp LGUI    &lt UMLAUT DE_Y  &kp X        &kp C       &kp V          &kp B              &kp N       &hm RALT M   &kp DE_COMMA   &kp DE_DOT   &lt UMLAUT DE_MINUS  &key_repeat
+                                             &kp ESC     &lt NAV SPACE  &sl EXTRA          &sl SYMBOL  &kp RET      &kp BSPC
                         >;
                 };
                 symbols_layer {
                     label = "Sym";
-// ------------------------------------------------------------------------------------------
-// | ^ |  1  |  2  |  3  |  4  |  5  |     |  6  |  7  |  8  |  9  |  0         | @         |
-// | ! |  "  |  <  |  (  |  {  |  [  |     |  /  |  *  |  +  |  =  |  sl EXTRA  | sl EXTRA  |
-// | ? |  '  |  >  |  )  |  }  |  ]  |     |  $  |  &  |  |  |  #  |  SynReq    | SynReq    |
-//                 | BSP | SPC | LSH |     | LCT | RET | ESC |
+// ------------------------------------------------------------------------------
+// |    |  1  |  2  |  3  |  4  |  5  |     |  6  |  7  |  8  |  9  |  0  |     |
+// |    |  ^  |  <  |  (  |  {  |  [  |     |  /  |  *  |  +  |  =  |  '  |     |
+// |    |  ´  |  >  |  )  |  }  |  ]  |     |  $  |  &  |  |  |  !  |  #  |     |
+//                  | BSP | SPC | LSH |     | LCT | RET | ESC |
                         bindings = <
-   &kp DE_CARET  &kp N1      &kp N2           &kp N3            &kp N4            &kp N5                 &kp N6             &kp N7            &kp N8            &kp N9              &kp N0        &kp DE_AT
-   &kp DE_EXCL   &kp DE_DQT  &hm LSHFT DE_LT  &hm LGUI DE_LPAR  &hm LALT DE_LBRC  &hm LCTRL DE_LBKT      &hm RCTRL DE_FSLH  &hm LALT DE_STAR  &hm RGUI DE_PLUS  &hm RSHFT DE_EQUAL  &sl EXTRA     &sl EXTRA
-   &kp DE_QMARK  &kp DE_SQT  &kp DE_GT        &kp DE_RPAR       &kp DE_RBRC       &kp DE_RBKT            &kp DE_DLLR        &kp DE_AMPS       &kp DE_PIPE       &kp DE_HASH         &kp DE_TILDE  &sl SYSTEM
-                                              &trans            &trans            &trans                 &trans             &trans            &trans
+   &trans  &kp N1              &kp N2           &kp N3            &kp N4            &kp N5            &kp N6       &kp N7            &kp N8            &kp N9              &kp N0            &trans
+   &trans  &hm LSHFT DE_CARET  &hm LCTRL DE_LT  &hm LGUI DE_LPAR  &hm LALT DE_LBRC  &kp DE_LBKT       &kp DE_FSLH  &hm LALT DE_STAR  &hm RGUI DE_PLUS  &hm RCTRL DE_EQUAL  &hm RSHFT DE_SQT  &trans
+   &trans  &kp DE_ACUTE        &kp DE_GT        &kp DE_RPAR       &kp DE_RBRC       &kp DE_RBKT       &kp DE_DLLR  &kp DE_AMPS       &kp DE_PIPE       &kp DE_EXCL         &kp DE_HASH       &trans
+                                                &trans            &trans            &trans            &sl EXTRA    &trans            &trans
                         >;
                 };
                 extra_layer {
                     label = "Extra";
-// -----------------------------------------------------------------------------
-// | ° |  1  |  2  |  3  |  4  |  5  |     |  6  |  7  |  8  |  9  |  0  |  @  |
-// | ! |  "  |  <  |  )  |     |  ]  |     |  \  |  *  |  %  |  ~  |     |     |
-// | ? |  `  |  >  |  )  |     |  ]  |     |  €  |  µ  |  |  |  ?  |  !  |     |
+// ----------------------------------------------------------------------------------
+// |    |  1  |  ²  |  ³  |  4  |  5  |     |  6  |  7  |  8  |  9  |  0       |     |
+// |    |  °  |  <  |  )  |  {  |  ]  |     |  \  |  *  |  %  |  ~  |  `       |     |
+// |    |  §  |  >  |  )  |  }  |  ]  |     |  €  |  µ  |  |  |  ?  |  SysReq  |     |
 //                 | BSP | SPC | LSH |     | LCT | RET | ESC |
                         bindings = <
-   &kp DE_DEG    &kp N1        &kp N2           &kp N3            &kp N4             &kp N5                 &kp N6             &kp N7            &kp N8             &kp N9              &kp N0       &kp DE_AT
-   &kp DE_EXCL   &kp DE_DQT    &hm LSHFT DE_GT  &hm LGUI DE_RPAR  &hm LALT DE_RBRC   &hm LCTRL DE_RBKT      &hm RCTRL DE_BSLH  &hm LALT DE_STAR  &hm RGUI DE_PRCNT  &hm RSHFT DE_TILDE  &kp DE_BSLH  &none
-   &kp DE_QMARK  &kp DE_GRAVE  &kp DE_GT        &kp DE_RPAR       &kp DE_RBRC        &kp DE_RBKT            &kp DE_EURO        &kp DE_AMPS       &kp DE_PIPE        &kp DE_QMARK        &kp DE_EXCL  &none
-                                                &trans            &trans             &trans                 &trans             &trans            &trans
+   &trans  &kp N1            &kp DE_SQUARE    &kp DE_CUBE       &kp N4             &kp N5                 &kp N6       &kp N7            &kp N8             &kp N9              &kp N0              &trans
+   &trans  &hm LSHFT DE_DEG  &hm LCTRL DE_GT  &hm LGUI DE_RPAR  &hm LALT DE_RBRC   &hm LCTRL DE_RBKT      &kp DE_BSLH  &hm LALT DE_STAR  &hm RGUI DE_PRCNT  &hm RCTRL DE_TILDE  &hm RSHFT DE_GRAVE  &trans
+   &trans  &kp DE_SECT       &kp DE_GT        &kp DE_RPAR       &kp DE_RBRC        &kp DE_RBKT            &kp DE_EURO  &kp DE_AMPS       &kp DE_PIPE        &kp DE_QMARK        &kp SYSREQ          &trans
+                                              &trans            &trans             &trans                 &trans       &trans            &trans
                         >;
                 };
                 umlaut_layer {
                     label = "Euro";
 // --------------------------------------------------------------------------------
-// |   |  @  |     |  €  |     |     |       |     |  ü  |     |  ö  |  §  |      |
+// |   |  @  |  @  |  €  |     |     |       |     |  ü  |     |  ö  |  §  |      |
 // |   |  ä  |  ß  |     |     |     |       |     |     |     |     |     |      |
 // |   |     |     |     |     |     |       |     |     |     |     |     |      |
 //                 | BSP | SPC | LSH |       | LCT | RET | ESC |
                         bindings = <
-   &trans  &kp DE_AT        &trans     &kp DE_EURO  &trans  &trans      &trans  &kp DE_U_UMLAUT  &trans   &kp DE_O_UMLAUT  &kp LS(DE_N3)  &trans
-  &trans  &kp DE_A_UMLAUT  &kp DE_SZ  &trans       &trans  &trans      &trans  &trans           &trans   &trans           &trans         &trans
-   &trans  &trans           &trans     &trans       &trans  &trans      &trans  &trans           &trans   &trans           &trans         &trans
+   &trans  &kp DE_AT        &trans     &kp DE_EURO  &trans  &trans      &trans  &kp DE_U_UMLAUT  &trans   &kp DE_O_UMLAUT  &kp DE_SECT  &trans
+   &trans  &kp DE_A_UMLAUT  &kp DE_SZ  &trans       &trans  &trans      &trans  &trans           &trans   &trans           &trans       &trans
+   &trans  &trans           &trans     &trans       &trans  &trans      &trans  &trans           &trans   &trans           &trans       &trans
                                        &trans       &trans  &trans      &trans  &trans           &trans
                         >;
                 };
