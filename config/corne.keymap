@@ -18,7 +18,7 @@
 #define SYSTEM 6
 
 #define HYPER LA(LC(LS(LGUI)))
-#define MEH   LA(LC(LSHF))
+#define MEH   LA(LC(LSHFT))
 
 &sk {
     quick-release;
@@ -85,10 +85,10 @@
 // |    |  §  |  >  |  )  |  }  |  ]  |     |  €  |  µ  |  |  |  ?  |  SysReq  |     |
 //                 | BSP | SPC | LSH |     | LCT | RET | ESC |
                         bindings = <
-   &trans  &kp N1            &kp DE_SQUARE    &kp DE_CUBE       &kp N4             &kp N5                 &kp N6       &kp N7            &kp N8             &kp N9              &kp N0              &trans
-   &trans  &hm LSHFT DE_DEG  &hm LCTRL DE_GT  &hm LGUI DE_RPAR  &hm LALT DE_RBRC   &hm LCTRL DE_RBKT      &kp DE_BSLH  &hm LALT DE_STAR  &hm RGUI DE_PRCNT  &hm RCTRL DE_TILDE  &hm RSHFT DE_GRAVE  &trans
-   &trans  &kp DE_SECT       &kp DE_GT        &kp DE_RPAR       &kp DE_RBRC        &kp DE_RBKT            &kp DE_EURO  &kp DE_AMPS       &kp DE_PIPE        &kp DE_QMARK        &kp SYSREQ          &trans
-                                              &trans            &trans             &trans                 &trans       &trans            &trans
+   &trans  &kp N1            &kp DE_SQUARE    &kp DE_CUBE       &kp N4             &kp N5           &kp N6       &kp N7            &kp N8             &kp N9              &kp N0              &trans
+   &trans  &hm LSHFT DE_DEG  &hm LCTRL DE_GT  &hm LGUI DE_RPAR  &hm LALT DE_RBRC   &kp DE_RBKT      &kp DE_BSLH  &hm LALT DE_STAR  &hm RGUI DE_PRCNT  &hm RCTRL DE_TILDE  &hm RSHFT DE_GRAVE  &trans
+   &trans  &kp DE_SECT       &kp DE_GT        &kp DE_RPAR       &kp DE_RBRC        &kp DE_RBKT      &kp DE_EURO  &kp DE_AMPS       &kp DE_PIPE        &kp DE_QMARK        &kp SYSREQ          &trans
+                                              &trans            &trans             &trans           &trans       &trans            &trans
                         >;
                 };
                 umlaut_layer {
