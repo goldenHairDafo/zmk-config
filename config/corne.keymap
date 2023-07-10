@@ -125,8 +125,8 @@
                         bindings = <
    &trans   &trans  &trans  &trans  &m_do   &trans             &kp LC(R)  &kp LC(DE_Z)  &kp LC(INS)  &kp LS(DEL)  &kp LS(INS)  &trans
    &trans   &trans  &trans  &trans  &trans  &trans             &kp LEFT   &kp DOWN      &kp UP       &kp RIGHT    &kp TAB      &trans
-   &trans   &trans  &trans  &trans  &trans  &trans             &kp HOME   &kp PG_DN     &kp PG_UP    &kp END      &caps_word   &trans
-                            &trans  &trans  &sl SYSTEM         &trans     &trans     &trans
+   &trans   &trans  &trans  &trans  &trans  &sl SYSTEM         &kp HOME   &kp PG_DN     &kp PG_UP    &kp END      &caps_word   &trans
+                            &trans  &trans  &trans             &trans     &trans     &trans
                         >;
                 };
                 function_layer {
@@ -161,12 +161,12 @@
 };
 
 // TODOs
-// [x] Navigration Layer
-// [-] Mouse Movement Layer (not supported by zmk at the moment)
-// [x] Function Key Layer
 // [ ] Media Key Layer
 // [ ] Mouse Assist Layer
 // [ ] Gaming Layer
+// [x] Navigration Layer
+// [-] Mouse Movement Layer (not supported by zmk at the moment)
+// [x] Function Key Layer
 // [x] Macro for domain name
 // [x] Fix System Layer
 
