@@ -46,6 +46,16 @@
                   bindings = <&mo>, <&sk>;
             };
         };
+        macros {
+            m_do: m_do {
+               label = "M_DOMAIN";
+               compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                = <&kp DE_E  &kp N6  &kp DE_Z  &kp N9  &kp R  &kp DE_DOT  &kp N  &kp DE_E  &kp T>
+                ;
+            };
+        };
         keymap {
                 compatible = "zmk,keymap";
 
@@ -108,15 +118,15 @@
                 navigation_layer {
                     label = "Nav";
 // ------------------------------------------------------------------------------------------
-// |   |     |     |     |     |     |       | REDO | UNDO  | COPY | CUT | PAST      |      |
-// |   |     |     |     |     |     |       |   <  |  v    |  ^   |  >  | TAB       |      |
-// |   |     |     |     |     |     |       | HOME | PDOWN | PUP  | END | CAPS_WORD |      |
-//                 | BSP | SPC | LSH |       | LCT | RET | ESC |
+// |   |     |     |     | M domain |          |       | REDO | UNDO  | COPY | CUT | PAST      |      |
+// |   |     |     |     |          |          |       |   <  |  v    |  ^   |  >  | TAB       |      |
+// |   |     |     |     |          | L System |       | HOME | PDOWN | PUP  | END | CAPS_WORD |      |
+//                 |     |          |          |       |      |       |      |
                         bindings = <
-   &trans   &trans  &trans  &trans  &trans  &trans        &kp LC(R)  &kp LC(DE_Z)  &kp LC(INS)  &kp LS(DEL)  &kp LS(INS)  &trans
-   &trans   &trans  &trans  &trans  &trans  &trans        &kp LEFT   &kp DOWN      &kp UP       &kp RIGHT    &kp TAB      &trans
-   &trans   &trans  &trans  &trans  &trans  &trans        &kp HOME   &kp PG_DN     &kp PG_UP    &kp END      &caps_word   &trans
-                            &trans  &trans  &trans        &trans     &trans     &trans
+   &trans   &trans  &trans  &trans  &m_do   &trans             &kp LC(R)  &kp LC(DE_Z)  &kp LC(INS)  &kp LS(DEL)  &kp LS(INS)  &trans
+   &trans   &trans  &trans  &trans  &trans  &trans             &kp LEFT   &kp DOWN      &kp UP       &kp RIGHT    &kp TAB      &trans
+   &trans   &trans  &trans  &trans  &trans  &trans             &kp HOME   &kp PG_DN     &kp PG_UP    &kp END      &caps_word   &trans
+                            &trans  &trans  &sl SYSTEM         &trans     &trans     &trans
                         >;
                 };
                 function_layer {
@@ -136,15 +146,15 @@
                 system_layer {
                     label = "Corne";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | bt3 | bt4 | bT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    |     |     |     |   |     |     |     |
                         bindings = <
-   &kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5           &kp N6    &kp N7    &kp N8  &kp N9     &kp N0  &kp BSPC
-   &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans 
-   &kp LSHFT   &trans        &trans        &trans        &trans        &trans           &trans    &trans    &trans  &trans     &trans  &trans
-                                           &kp LGUI      &trans        &kp SPACE        &kp RET   &trans    &kp RALT
+   &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4       &trans  &trans  &trans  &trans  &trans  &trans 
+   &trans       &trans        &trans        &trans        &trans        &trans             &trans  &trans  &trans  &trans  &trans  &trans
+   &bootloader  &trans        &trans        &trans        &trans        &trans             &trans  &trans  &trans  &trans  &trans  &bootloader
+                                            &trans        &trans        &trans             &trans  &trans  &trans
                         >;
                 };
         };
@@ -152,11 +162,11 @@
 
 // TODOs
 // [x] Navigration Layer
-// [ ] Mouse Movement Layer
+// [-] Mouse Movement Layer (not supported by zmk at the moment)
 // [x] Function Key Layer
 // [ ] Media Key Layer
 // [ ] Mouse Assist Layer
 // [ ] Gaming Layer
-// [ ] Macro for domain name
-// [ ] Fix System Layer
+// [x] Macro for domain name
+// [x] Fix System Layer
 
