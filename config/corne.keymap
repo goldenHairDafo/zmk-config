@@ -18,6 +18,7 @@
 #define FUNC 5
 #define MOUSE 6
 #define SYSTEM 6
+#define GAME 7
 
 #define HYPER LA(LC(LS(LGUI)))
 #define MEH   LA(LC(LSHFT))
@@ -55,6 +56,14 @@
                 #binding-cells = <0>;
                 bindings
                 = <&kp DE_E  &kp N6  &kp DE_Z  &kp N9  &kp R  &kp DE_DOT  &kp N  &kp DE_E  &kp T>
+                ;
+            };
+            m_scj: m_scj {
+               label = "M_SATIS_CROUCH_JUMP";
+               compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                = <&kp C  &kp SPACE>
                 ;
             };
         };
@@ -122,13 +131,13 @@
 // ------------------------------------------------------------------------------------------
 // |   |     |     |     | M domain |          |       | REDO | UNDO  | COPY | CUT | PAST      |      |
 // |   |     |     |     |          |          |       |   <  |  v    |  ^   |  >  | TAB       |      |
-// |   |     |     |     |          | L System |       | HOME | PDOWN | PUP  | END | CAPS_WORD |      |
+// |   |     |     |     | L GAME   | L System |       | HOME | PDOWN | PUP  | END | CAPS_WORD |      |
 //                 |     |          |          |       |      |       |      |
                         bindings = <
-   &trans   &trans  &trans  &trans  &m_do   &trans             &kp LC(R)  &kp LC(DE_Z)  &kp LC(INS)  &kp LS(DEL)  &kp LS(INS)  &trans
-   &trans   &trans  &trans  &trans  &trans  &trans             &kp LEFT   &kp DOWN      &kp UP       &kp RIGHT    &kp TAB      &trans
-   &trans   &trans  &trans  &trans  &trans  &sl SYSTEM         &kp HOME   &kp PG_DN     &kp PG_UP    &kp END      &caps_word   &trans
-                            &trans  &trans  &trans             &trans     &trans     &trans
+   &trans   &trans  &trans  &trans  &m_do     &trans             &kp LC(R)  &kp LC(DE_Z)  &kp LC(INS)  &kp LS(DEL)  &kp LS(INS)  &trans
+   &trans   &trans  &trans  &trans  &trans    &trans             &kp LEFT   &kp DOWN      &kp UP       &kp RIGHT    &kp TAB      &trans
+   &trans   &trans  &trans  &trans  &sl GAME  &sl SYSTEM         &kp HOME   &kp PG_DN     &kp PG_UP    &kp END      &caps_word   &trans
+                            &trans  &trans    &trans             &trans     &trans     &trans
                         >;
                 };
                 function_layer {
@@ -157,6 +166,20 @@
    &trans       &trans        &trans        &trans        &trans        &trans             &trans        &trans        &trans  &trans  &trans  &trans
    &bootloader  &trans        &trans        &trans        &trans        &trans             &trans        &trans        &trans  &trans  &trans  &bootloader
                                             &trans        &trans        &trans             &trans        &trans        &trans
+                        >;
+                };
+                game_layer {
+                    label = "Game";
+// -----------------------------------------------------------------------------------------
+// |  TAB    |     |     |     |     |     |   |     |     |     |     |     |      |
+// |  M_SCJ  |     |     |     |     |     |   |     |     |     |     |     |      |
+// |         |     |     |     |     |     |   |     |     |     |     |     |      |
+//                       |     |     |     |   |     |     |     |
+                        bindings = <
+   &kp TAB    &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+   &m_scj     &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+   &kp LCTRL  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans  &trans  &trans      &trans  &trans  &trans
                         >;
                 };
         };
