@@ -134,10 +134,10 @@
 // |   |     |     |     | L GAME   | L System |       | HOME | PDOWN | PUP  | END | CAPS_WORD |      |
 //                 |     |          |          |       |      |       |      |
                         bindings = <
-   &trans   &trans  &trans  &trans  &m_do     &trans             &kp LC(R)  &kp LC(DE_Z)  &kp LC(INS)  &kp LS(DEL)  &kp LS(INS)  &trans
-   &trans   &trans  &trans  &trans  &trans    &trans             &kp LEFT   &kp DOWN      &kp UP       &kp RIGHT    &kp TAB      &trans
-   &trans   &trans  &trans  &trans  &sl GAME  &sl SYSTEM         &kp HOME   &kp PG_DN     &kp PG_UP    &kp END      &caps_word   &trans
-                            &trans  &trans    &trans             &trans     &trans     &trans
+   &trans   &trans  &trans  &trans  &m_do      &trans             &kp LC(R)  &kp LC(DE_Z)  &kp LC(INS)  &kp LS(DEL)  &kp LS(INS)  &trans
+   &trans   &trans  &trans  &trans  &trans     &trans             &kp LEFT   &kp DOWN      &kp UP       &kp RIGHT    &kp TAB      &trans
+   &trans   &trans  &trans  &trans  &tog GAME  &sl SYSTEM         &kp HOME   &kp PG_DN     &kp PG_UP    &kp END      &caps_word   &trans
+                            &trans  &trans     &trans             &trans     &trans     &trans
                         >;
                 };
                 function_layer {
