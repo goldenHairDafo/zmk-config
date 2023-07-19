@@ -19,6 +19,7 @@
 #define MOUSE 6
 #define SYSTEM 6
 #define GAME 7
+#define GAME_LO 8
 
 #define HYPER LA(LC(LS(LGUI)))
 #define MEH   LA(LC(LSHFT))
@@ -171,15 +172,29 @@
                 game_layer {
                     label = "Game";
 // -----------------------------------------------------------------------------------------
-// |  TAB    |     |     |     |     |     |   |     |     |     |     |     |      |
-// |  M_SCJ  |     |     |     |     |     |   |     |     |     |     |     |      |
-// |         |     |     |     |     |     |   |     |     |     |     |     |      |
-//                       |     |     |     |   |     |     |     |
+// |  TAB    |     |     |     |       |     | # |     |     |     |     |     |      |
+// |  M_SCJ  |  A  |  S  |  D  |  F    |  G  | # |     |     |     |     |     |      |
+// |         |     |     |     |       |     | # |     |     |     |     |     |      |
+//                       |     | SPACE |     | # |     |     |     |
                         bindings = <
-   &kp TAB    &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-   &m_scj     &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-   &kp LCTRL  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans  &trans  &trans      &trans  &trans  &trans
+   &kp TAB    &trans  &trans  &trans  &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
+   &kp LSHFT  &kp A   &kp S   &kp D   &kp F      &kp G            &trans  &trans  &trans  &trans  &trans  &trans
+   &kp LCTRL  &trans  &trans  &trans  &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans  &kp SPACE  &sl GAME_LO      &trans  &trans  &trans
+                        >;
+                };
+                game_lower_layer {
+                    label = "GL";
+// -----------------------------------------------------------------------------------------
+// |  TAB  |     |     |        |        |     | # |     |     |     |     |     |      |
+// |  ALT  |  A  |  S  |  D     |  F     |  G  | # |     |     |     |     |     |      |
+// |  GUI  |     |     |        |        |     | # |     |     |     |     |     |      |
+//                     | L GAME |  m_scj |     | # |     |     |     |
+                        bindings = <
+   &kp TAB   &trans  &trans  &trans     &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
+   &kp LALT  &kp A   &kp S   &kp D      &kp F      &kp G            &trans  &trans  &trans  &trans  &trans  &trans
+   &kp LGUI  &trans  &trans  &trans     &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
+                             &tog GAME  &trans     &m_scj      &trans  &trans  &trans
                         >;
                 };
         };
