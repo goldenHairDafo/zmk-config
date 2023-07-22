@@ -11,6 +11,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include "keys_de.h"
 
+#define BASE 0
 #define SYMBOL 1
 #define EXTRA 2
 #define UMLAUT 3
@@ -64,7 +65,9 @@
                compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
-                = <&kp C  &kp SPACE>
+                = <&macro_press &kp C>
+                , <&macro_press &kp SPACE>
+                , <&macro_release &kp C &kp SPACE>
                 ;
             };
         };
@@ -194,7 +197,7 @@
    &kp TAB   &trans  &trans  &trans     &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
    &kp LALT  &kp A   &kp S   &kp D      &kp F      &kp G            &trans  &trans  &trans  &trans  &trans  &trans
    &kp LGUI  &trans  &trans  &trans     &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
-                             &tog GAME  &trans     &m_scj      &trans  &trans  &trans
+                             &to BASE   &trans     &m_scj      &trans  &trans  &trans
                         >;
                 };
         };
