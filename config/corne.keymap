@@ -66,12 +66,11 @@
                 #binding-cells = <0>;
                 bindings
                 = <&macro_press &kp C>
-                , <&macro_tap_time 250>
-                , <&macro_tap &kp SPACE>
-                , <&macro_wait_time 10>
+                , <&macro_tap_time 300>
+                , <&macro_tap &kp SPCE>
+                , <&macro_wait_time 20>
                 , <&macro_release &kp C>
                 ;
-            };
         };
         keymap {
                 compatible = "zmk,keymap";
