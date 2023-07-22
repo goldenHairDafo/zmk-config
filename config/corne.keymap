@@ -66,8 +66,9 @@
                 #binding-cells = <0>;
                 bindings
                 = <&macro_press &kp C>
-                , <&macro_tap_time 500>
+                , <&macro_tap_time 250>
                 , <&macro_tap &kp SPACE>
+                , <&macro_wait_time 10>
                 , <&macro_release &kp C>
                 ;
             };
