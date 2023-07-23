@@ -79,38 +79,38 @@
                 default_layer {
                     label = "Base";
 // ---------------------------------------------------------------------------------------------
-// | ALT       |  Q  |  W  |  E  |  R  |  T  |     |  Z  |  U   |  I  |  O  |  P  | CAPS_WORD  |
-// | TAB       |  A  |  S  |  D  |  F  |  G  |     |  H  |  J   |  K  |  L  |  "  | sl SYMBOL  |
-// | sl UMLAUT |  Y  |  X  |  C  |  V  |  B  |     |  N  |  M   |  ,  |  .  |  -  | sl UMLAUT  |
-//                         | BSP | SPC | LSH |     | LCT | RET  | ESC |
+// | ALT       |  Q  |  W  |  E  |  R  |  T  | ### |  Z  |  U   |  I  |  O  |  P  | CAPS_WORD  |
+// | TAB       |  A  |  S  |  D  |  F  |  G  | ### |  H  |  J   |  K  |  L  |  "  | sl SYMBOL  |
+// | sl UMLAUT |  Y  |  X  |  C  |  V  |  B  | ### |  N  |  M   |  ,  |  .  |  -  | sl UMLAUT  |
+//                         | BSP | SPC | LSH | ### | LCT | RET  | ESC |
                         bindings = <
-   &kp LALT    &kp DE_Q         &kp W        &kp DE_E    &kp R          &kp T             &kp DE_Z    &kp U         &kp I          &kp O        &kp P                &caps_word
-   &kp ESC     &hm LSHFT A      &hm LCTRL S  &hm LGUI D  &hm LALT F     &kp G             &kp H       &hm LALT J    &hm RGUI K     &hm RCTRL L  &hm RSHFT DE_DQT     &none
-   &kp LGUI    &lt UMLAUT DE_Y  &kp X        &kp C       &kp V          &kp B             &kp N       &hm RALT M    &kp DE_COMMA   &kp DE_DOT   &lt UMLAUT DE_MINUS  &key_repeat
-                                             &kp ESC     &lt NAV SPACE  &sl SYMBOL        &sl SYMBOL  &lt FUNC RET  &kp BSPC
+   &kp LALT    &kp DE_Q         &kp W        &kp DE_E    &kp R        &kp T         &kp DE_Z    &kp U         &kp I          &kp O        &kp P                &caps_word
+   &kp ESC     &hm LSHFT A      &hm LCTRL S  &hm LGUI D  &hm LALT F   &kp G         &kp H       &hm LALT J    &hm RGUI K     &hm RCTRL L  &hm RSHFT DE_DQT     &none
+   &kp LGUI    &lt UMLAUT DE_Y  &kp X        &kp C       &kp V        &kp B         &kp N       &hm RALT M    &kp DE_COMMA   &kp DE_DOT   &lt UMLAUT DE_MINUS  &key_repeat
+                                             &kp ESC     &kp SPACE    &sl NAV       &sl SYMBOL  &lt FUNC RET  &kp BSPC
                         >;
                 };
                 symbols_layer {
                     label = "Sym";
 // ------------------------------------------------------------------------------
-// |    |  1  |  2  |  3  |  4  |  5  |     |  6  |  7  |  8  |  9  |  0  |     |
-// |    |  ^  |  <  |  (  |  {  |  [  |     |  /  |  *  |  +  |  =  |  '  |     |
-// |    |  ´  |  >  |  )  |  }  |  ]  |     |  $  |  &  |  |  |  !  |  #  |     |
-//                  | BSP | SPC | LSH |     | LCT | RET | ESC |
+// |    |  1  |  2  |  3  |  4  |  5  | ### |  6  |  7  |  8  |  9  |  0  |     |
+// |    |  ^  |  <  |  (  |  {  |  [  | ### |  /  |  *  |  +  |  =  |  '  |     |
+// |    |  ´  |  >  |  )  |  }  |  ]  | ### |  $  |  &  |  |  |  !  |  #  |     |
+//                  | BSP | SPC | LSH | ### | LCT | RET | ESC |
                         bindings = <
-   &trans  &kp N1              &kp N2           &kp N3            &kp N4            &kp N5            &kp N6       &kp N7            &kp N8            &kp N9              &kp N0            &trans
-   &trans  &hm LSHFT DE_CARET  &hm LCTRL DE_LT  &hm LGUI DE_LPAR  &hm LALT DE_LBRC  &kp DE_LBKT       &kp DE_FSLH  &hm LALT DE_STAR  &hm RGUI DE_PLUS  &hm RCTRL DE_EQUAL  &hm RSHFT DE_SQT  &trans
-   &trans  &kp DE_ACUTE        &kp DE_GT        &kp DE_RPAR       &kp DE_RBRC       &kp DE_RBKT       &kp DE_DLLR  &kp DE_AMPS       &kp DE_PIPE       &kp DE_EXCL         &kp DE_HASH       &trans
-                                                &trans            &trans            &sl EXTRA         &sl EXTRA    &trans            &trans
+   &trans  &kp N1              &kp N2           &kp N3            &kp N4            &kp N5             &kp N6       &kp N7            &kp N8            &kp N9              &kp N0            &trans
+   &trans  &hm LSHFT DE_CARET  &hm LCTRL DE_LT  &hm LGUI DE_LPAR  &hm LALT DE_LBRC  &kp DE_LBKT        &kp DE_FSLH  &hm LALT DE_STAR  &hm RGUI DE_PLUS  &hm RCTRL DE_EQUAL  &hm RSHFT DE_SQT  &trans
+   &trans  &kp DE_ACUTE        &kp DE_GT        &kp DE_RPAR       &kp DE_RBRC       &kp DE_RBKT        &kp DE_DLLR  &kp DE_AMPS       &kp DE_PIPE       &kp DE_EXCL         &kp DE_HASH       &trans
+                                                &trans            &trans            &sl EXTRA          &sl EXTRA    &trans            &trans
                         >;
                 };
                 extra_layer {
                     label = "Extra";
 // -----------------------------------------------------------------------------------
-// |    |  1  |  ²  |  ³  |  4  |  5  |     |  6  |  7  |  8  |  9  |  0       |     |
-// |    |  °  |  <  |  )  |  {  |  ]  |     |  \  |  *  |  %  |  ~  |  `       |     |
-// |    |  §  |  >  |  )  |  }  |  ]  |     |  €  |  µ  |  |  |  ?  |  SysReq  |     |
-//                 | BSP | SPC | LSH |     | LCT | RET | ESC |
+// |    |  1  |  ²  |  ³  |  4  |  5  | ### |  6  |  7  |  8  |  9  |  0       |     |
+// |    |  °  |  <  |  )  |  {  |  ]  | ### |  \  |  *  |  %  |  ~  |  `       |     |
+// |    |  §  |  >  |  )  |  }  |  ]  | ### |  €  |  µ  |  |  |  ?  |  SysReq  |     |
+//                  | BSP | SPC | LSH | ### | LCT | RET | ESC |
                         bindings = <
    &trans  &kp N1            &kp DE_SQUARE    &kp DE_CUBE       &kp N4             &kp N5           &kp N6       &kp N7            &kp N8             &kp N9              &kp N0              &trans
    &trans  &hm LSHFT DE_DEG  &hm LCTRL DE_GT  &hm LGUI DE_RPAR  &hm LALT DE_RBRC   &kp DE_RBKT      &kp DE_BSLH  &hm LALT DE_STAR  &hm RGUI DE_PRCNT  &hm RCTRL DE_TILDE  &hm RSHFT DE_GRAVE  &trans
@@ -121,10 +121,10 @@
                 umlaut_layer {
                     label = "Euro";
 // --------------------------------------------------------------------------------
-// |   |  @  |  @  |  €  |     |     |       |     |  ü  |     |  ö  |  §  |      |
-// |   |  ä  |  ß  |     |     |     |       |     |     |     |     |     |      |
-// |   |     |     |     |     |     |       |     |     |     |     |     |      |
-//                 | BSP | SPC | LSH |       | LCT | RET | ESC |
+// |   |  @  |  @  |  €  |     |     | ### |     |  ü  |     |  ö  |  §  |      |
+// |   |  ä  |  ß  |     |     |     | ### |     |     |     |     |     |      |
+// |   |     |     |     |     |     | ### |     |     |     |     |     |      |
+//                 | BSP | SPC | LSH | ### | LCT | RET | ESC |
                         bindings = <
    &trans  &kp DE_AT        &trans     &kp DE_EURO  &trans  &trans      &trans  &kp DE_U_UMLAUT  &trans   &kp DE_O_UMLAUT  &kp DE_SECT  &trans
    &trans  &kp DE_A_UMLAUT  &kp DE_SZ  &trans       &trans  &trans      &trans  &trans           &trans   &trans           &trans       &trans
@@ -135,10 +135,10 @@
                 navigation_layer {
                     label = "Nav";
 // ------------------------------------------------------------------------------------------
-// |   |     |     |     | M domain |          |       | REDO | UNDO  | COPY | CUT | PAST      |      |
-// |   |     |     |     |          |          |       |   <  |  v    |  ^   |  >  | TAB       |      |
-// |   |     |     |     | L GAME   | L System |       | HOME | PDOWN | PUP  | END | CAPS_WORD |      |
-//                 |     |          |          |       |      |       |      |
+// |   |     |     |     | M domain |          | ### | REDO | UNDO  | COPY | CUT | PAST      |      |
+// |   |     |     |     |          |          | ### |   <  |  v    |  ^   |  >  | TAB       |      |
+// |   |     |     |     | L GAME   | L System | ### | HOME | PDOWN | PUP  | END | CAPS_WORD |      |
+//                 |     |          |          | ### |      |       |      |
                         bindings = <
    &trans   &trans  &trans  &trans  &m_do      &trans             &kp LC(R)  &kp LC(DE_Z)  &kp LC(INS)  &kp LS(DEL)  &kp LS(INS)  &trans
    &trans   &trans  &trans  &trans  &trans     &trans             &kp LEFT   &kp DOWN      &kp UP       &kp RIGHT    &kp TAB      &trans
@@ -149,10 +149,10 @@
                 function_layer {
                     label = "Func";
 // --------------------------------------------------------------------------------
-// |   |  F1   |  F2   |  F3  | F4    |  F5   |       |  F6       |  F7  |  F8   |  F9  |  F10  |      |
-// |   |  F11  |  F12  |      |       |       |       |           |      |       |      |       |      |
-// |   |       |       |      |       |       |       |  Hyper    |  MEH |       |      |       |      |
-//                     | BSP  | SPC   |  LSH  |       |  LCT      | RET  | ESC   |
+// |   |  F1   |  F2   |  F3  | F4    |  F5   | ### |  F6       |  F7  |  F8   |  F9  |  F10  |      |
+// |   |  F11  |  F12  |      |       |       | ### |           |      |       |      |       |      |
+// |   |       |       |      |       |       | ### |  Hyper    |  MEH |       |      |       |      |
+//                     | BSP  | SPC   |  LSH  | ### |  LCT      | RET  | ESC   |
                         bindings = <
    &trans   &kp F1   &kp F2         &kp F3  &kp F4   &kp F5           &kp F6     &kp F7   &kp F8   &kp F9  &kp F10  &trans
    &trans   &kp F11  &hm LSHFT F12  &trans  &trans   &trans           &trans     &trans   &trans   &trans  &trans   &trans
@@ -163,10 +163,10 @@
                 system_layer {
                     label = "Corne";
 // -----------------------------------------------------------------------------------------
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     |     |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | ### |     |     |     |     |      |
+// |      |     |     |     |     |     |   | ### |     |     |     |     |      |
+// |      |     |     |     |     |     |   | ### |     |     |     |     |      |
+//                    |     |     |     |   | ### |     |     |
                         bindings = <
    &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4       &out OUT_BLE  &out OUT_USB  &trans  &trans  &trans  &ext_power EP_TOG
    &trans       &trans        &trans        &trans        &trans        &trans             &trans        &trans        &trans  &trans  &trans  &trans
@@ -177,10 +177,10 @@
                 game_layer {
                     label = "Game";
 // -----------------------------------------------------------------------------------------
-// |  TAB    |     |     |     |       |     | # |     |     |     |     |     |      |
-// |  M_SCJ  |  A  |  S  |  D  |  F    |  G  | # |     |     |     |     |     |      |
-// |         |     |     |     |       |     | # |     |     |     |     |     |      |
-//                       |     | SPACE |     | # |     |     |     |
+// |  TAB    |     |     |     |       |     | ### |     |     |     |     |     |      |
+// |  M_SCJ  |  A  |  S  |  D  |  F    |  G  | ### |     |     |     |     |     |      |
+// |         |     |     |     |       |     | ### |     |     |     |     |     |      |
+//                       |     | SPACE |     | ### |     |     |     |
                         bindings = <
    &kp TAB    &trans  &trans  &trans  &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
    &kp LSHFT  &kp A   &kp S   &kp D   &kp F      &kp G            &trans  &trans  &trans  &trans  &trans  &trans
@@ -191,10 +191,10 @@
                 game_lower_layer {
                     label = "GL";
 // -----------------------------------------------------------------------------------------
-// |  TAB  |     |     |        |        |     | # |     |     |     |     |     |      |
-// |  ALT  |  A  |  S  |  D     |  F     |  G  | # |     |     |     |     |     |      |
-// |  GUI  |     |     |        |        |     | # |     |     |     |     |     |      |
-//                     | L GAME |  m_scj |     | # |     |     |     |
+// |  TAB  |     |     |        |        |     | ### |     |     |     |     |     |      |
+// |  ALT  |  A  |  S  |  D     |  F     |  G  | ### |     |     |     |     |     |      |
+// |  GUI  |     |     |        |        |     | ### |     |     |     |     |     |      |
+//                     | L GAME |  m_scj |     | ### |     |     |     |
                         bindings = <
    &kp TAB   &trans  &trans  &trans     &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
    &kp LALT  &kp A   &kp S   &kp D      &kp F      &kp G            &trans  &trans  &trans  &trans  &trans  &trans
