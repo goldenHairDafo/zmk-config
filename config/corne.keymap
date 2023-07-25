@@ -39,9 +39,7 @@
                   label = "HOMEROW_MOD_SHIFT";
                   #binding-cells = <2>;
                   tapping-term-ms = <150>;
-                  quick-tap-ms = <80>;
                   flavor = "tap-preferred";
-                  global-quick-tap;
                   bindings = <&kp>, <&kp>;
             };
             hm: home_row_mods {
@@ -50,7 +48,7 @@
                   #binding-cells = <2>;
                   tapping-term-ms = <210>;
                   quick-tap-ms = <0>;
-                  flavor = "balanced";
+                  flavor = "tap-preferred";
                   bindings = <&kp>, <&kp>;
             };
             sm: hold_tap_sk_mo {
@@ -94,10 +92,10 @@
 // | sl UMLAUT |  Y  |  X  |  C  |  V  |  B  | ### |  N  |  M   |  ,  |  .  |  -  | sl UMLAUT  |
 //                         | BSP | SPC | LSH | ### | LCT | RET  | ESC |
                         bindings = <
-   &kp LALT    &kp DE_Q         &kp W        &kp DE_E    &kp R        &kp T         &kp DE_Z    &kp U         &kp I          &kp O        &kp P                &caps_word
-   &kp ESC     &hs LSHFT A      &hm LCTRL S  &hm LGUI D  &hm LALT F   &kp G         &kp H       &hm LALT J    &hm RGUI K     &hm RCTRL L  &hs RSHFT DE_DQT     &none
-   &kp LGUI    &lt UMLAUT DE_Y  &kp X        &kp C       &kp V        &kp B         &kp N       &hm RALT M    &kp DE_COMMA   &kp DE_DOT   &lt UMLAUT DE_MINUS  &key_repeat
-                                             &kp ESC     &kp SPACE    &sl NAV       &sl SYMBOL  &lt FUNC RET  &kp BSPC
+   &kp LALT    &kp DE_Q         &kp W  &kp DE_E      &kp R        &kp T    &kp DE_Z    &kp U         &kp I          &kp O        &kp P                &kp LALT
+   &kp LSHIFT  &kp A            &kp S  &kp D         &kp F        &kp G    &kp H       &kp J         &kp K          &kp L        &kp DE_DQT           &kp RSHFT
+   &kp LCTRL   &lt UMLAUT DE_Y  &kp X  &kp C         &kp V        &kp B    &kp N       &hm RALT M    &kp DE_COMMA   &kp DE_DOT   &lt UMLAUT DE_MINUS  &kp RCTRL
+                                       &hm LGUI ESC  &kp SPACE    &sl NAV  &sl SYMBOL  &lt FUNC RET  &hm LGUI BSPC
                         >;
                 };
                 symbols_layer {
@@ -108,10 +106,10 @@
 // |    |  ´  |  >  |  )  |  }  |  ]  | ### |  $  |  &  |  |  |  !  |  #  |     |
 //                  | BSP | SPC | LSH | ### | LCT | RET | ESC |
                         bindings = <
-   &trans  &kp N1              &kp N2           &kp N3            &kp N4            &kp N5             &kp N6       &kp N7            &kp N8            &kp N9              &kp N0            &trans
-   &trans  &hs LSHFT DE_CARET  &hm LCTRL DE_LT  &hm LGUI DE_LPAR  &hm LALT DE_LBRC  &kp DE_LBKT        &kp DE_FSLH  &hm LALT DE_STAR  &hm RGUI DE_PLUS  &hm RCTRL DE_EQUAL  &hs RSHFT DE_SQT  &trans
-   &trans  &kp DE_ACUTE        &kp DE_GT        &kp DE_RPAR       &kp DE_RBRC       &kp DE_RBKT        &kp DE_DLLR  &kp DE_AMPS       &kp DE_PIPE       &kp DE_EXCL         &kp DE_HASH       &trans
-                                                &trans            &trans            &sl EXTRA          &sl EXTRA    &trans            &trans
+   &trans  &kp N1        &kp N2     &kp N3       &kp N4        &kp N5             &kp N6       &kp N7       &kp N8       &kp N9        &kp N0       &trans
+   &trans  &kp DE_CARET  &kp DE_LT  &kp DE_LPAR  &kp  DE_LBRC  &kp DE_LBKT        &kp DE_FSLH  &kp DE_STAR  &kp DE_PLUS  &kp DE_EQUAL  &kp DE_SQT   &trans
+   &trans  &kp DE_ACUTE  &kp DE_GT  &kp DE_RPAR  &kp DE_RBRC   &kp DE_RBKT        &kp DE_DLLR  &kp DE_AMPS  &kp DE_PIPE  &kp DE_EXCL   &kp DE_HASH  &trans
+                                    &trans       &trans        &sl EXTRA          &sl EXTRA    &trans       &trans
                         >;
                 };
                 extra_layer {
@@ -122,10 +120,10 @@
 // |    |  §  |  >  |  )  |  }  |  ]  | ### |  €  |  µ  |  |  |  ?  |  SysReq  |     |
 //                  | BSP | SPC | LSH | ### | LCT | RET | ESC |
                         bindings = <
-   &trans  &kp N1            &kp DE_SQUARE    &kp DE_CUBE       &kp N4             &kp N5           &kp N6       &kp N7            &kp N8             &kp N9              &kp N0              &trans
-   &trans  &hs LSHFT DE_DEG  &hm LCTRL DE_GT  &hm LGUI DE_RPAR  &hm LALT DE_RBRC   &kp DE_RBKT      &kp DE_BSLH  &hm LALT DE_STAR  &hm RGUI DE_PRCNT  &hm RCTRL DE_TILDE  &hs RSHFT DE_GRAVE  &trans
-   &trans  &kp DE_SECT       &kp DE_GT        &kp DE_RPAR       &kp DE_RBRC        &kp DE_RBKT      &kp DE_EURO  &kp DE_AMPS       &kp DE_PIPE        &kp DE_QMARK        &kp SYSREQ          &trans
-                                              &trans            &trans             &trans           &trans       &trans            &trans
+   &trans  &kp N1       &kp DE_SQUARE &kp DE_CUBE  &kp N4       &kp N5           &kp N6       &kp N7       &kp N8        &kp N9        &kp N0        &trans
+   &trans  &kp DE_DEG   &kp DE_GT     &kp DE_RPAR  &kp DE_RBRC  &kp DE_RBKT      &kp DE_BSLH  &kp DE_STAR  &kp DE_PRCNT  &kp DE_TILDE  &kp DE_GRAVE  &trans
+   &trans  &kp DE_SECT  &kp DE_GT     &kp DE_RPAR  &kp DE_RBRC  &kp DE_RBKT      &kp DE_EURO  &kp DE_AMPS  &kp DE_PIPE   &kp DE_QMARK  &kp SYSREQ    &trans
+                                      &trans       &trans       &trans           &trans       &trans       &trans
                         >;
                 };
                 umlaut_layer {
@@ -164,10 +162,10 @@
 // |   |       |       |      |       |       | ### |  Hyper    |  MEH |       |      |       |      |
 //                     | BSP  | SPC   |  LSH  | ### |  LCT      | RET  | ESC   |
                         bindings = <
-   &trans   &kp F1   &kp F2         &kp F3  &kp F4   &kp F5           &kp F6     &kp F7   &kp F8   &kp F9  &kp F10  &trans
-   &trans   &kp F11  &hs LSHFT F12  &trans  &trans   &trans           &trans     &trans   &trans   &trans  &trans   &trans
-   &trans   &trans   &trans         &trans  &trans   &trans           &sk HYPER  &sk MEH  &trans   &trans  &trans   &trans
-                                    &trans  &trans   &trans           &trans     &trans  &trans
+   &trans   &kp F1   &kp F2   &kp F3  &kp F4   &kp F5           &kp F6     &kp F7   &kp F8   &kp F9  &kp F10  &trans
+   &trans   &kp F11  &kp F12  &trans  &trans   &trans           &trans     &trans   &trans   &trans  &trans   &trans
+   &trans   &trans   &trans   &trans  &trans   &trans           &sk HYPER  &sk MEH  &trans   &trans  &trans   &trans
+                              &trans  &trans   &trans           &trans     &trans  &trans
                         >;
                 };
                 system_layer {
@@ -192,10 +190,10 @@
 // |         |     |     |     |       |     | ### |     |     |     |     |     |      |
 //                       |     | SPACE |     | ### |     |     |     |
                         bindings = <
-   &kp TAB    &trans  &trans  &trans  &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
-   &kp LSHFT  &kp A   &kp S   &kp D   &kp F      &kp G            &trans  &trans  &trans  &trans  &trans  &trans
-   &kp LCTRL  &trans  &trans  &trans  &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans  &kp SPACE  &sl GAME_LO      &trans  &trans  &trans
+   &hm LALT TAB &trans  &trans  &trans  &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
+   &trans       &kp A   &kp S   &kp D   &kp F      &kp G            &trans  &trans  &trans  &trans  &trans  &trans
+   &trans       &trans  &trans  &trans  &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &kp SPACE  &sl GAME_LO      &trans  &trans  &trans
                         >;
                 };
                 game_lower_layer {
@@ -206,10 +204,10 @@
 // |  GUI  |     |     |        |        |     | ### |     |     |     |     |     |      |
 //                     | L GAME |  m_scj |     | ### |     |     |     |
                         bindings = <
-   &kp TAB   &trans  &trans  &trans     &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
-   &kp LALT  &kp A   &kp S   &kp D      &kp F      &kp G            &trans  &trans  &trans  &trans  &trans  &trans
-   &kp LGUI  &trans  &trans  &trans     &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
-                             &to BASE   &trans     &m_scj      &trans  &trans  &trans
+   &kp TAB   &trans  &trans  &trans     &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
+   &kp LALT  &kp A   &kp S   &kp D      &kp F    &kp G       &trans  &trans  &trans  &trans  &trans  &trans
+   &kp LGUI  &trans  &trans  &trans     &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                             &to BASE   &trans   &m_scj      &trans  &trans  &trans
                         >;
                 };
         };
