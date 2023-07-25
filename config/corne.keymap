@@ -40,7 +40,7 @@
                   #binding-cells = <2>;
                   tapping-term-ms = <150>;
                   quick-tap-ms = <0>;
-                  flavor = "tap-preferrd";
+                  flavor = "tap-preferred";
                   bindings = <&kp>, <&kp>;
             };
             sm: hold_tap_sk_mo {
