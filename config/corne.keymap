@@ -41,7 +41,7 @@
                   tapping-term-ms = <200>;
                   quick-tap-ms = <125>;
                   flavor = "tap-preferred";
-                  global-quick-tab;
+                  global-quick-tap;
                   bindings = <&kp>, <&kp>;
             };
             sm: hold_tap_sk_mo {
