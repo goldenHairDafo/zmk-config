@@ -10,6 +10,20 @@
 NICENANO_DIR=/run/media/$USER/NICENANO
 LEFT_FILE="corne_left nice_view_adapter nice_view-nice_nano_v2-zmk.uf2"
 RIGHT_FILE="corne_right nice_view_adapter nice_view-nice_nano_v2-zmk.uf2"
+WORKING_DIR=$HOME/.local/share/zmk-firmeware
+BACKUP_DIR=$WORKING_DIR/backup
+
+if test ! -d $WORKING_DIR 
+then
+  echo "[i] create working directory $WORKING_DIR"
+  mkdir -p $WORKING_DIR
+fi
+if test ! -d $BACKUP_DIR
+then
+  echo "[i] create backup directory $BACKUP_DIR"
+  mkdir -p $BACKUP_DIR
+fi
+
 
 # if the first parameter is empty us default archive name
 # otherwise use the parameter 
@@ -22,15 +36,17 @@ fi
 
 if test -e $FIRMWARE
 then
-  unzip -o $FIRMWARE
+  unzip -o -d $WORKING_DIR $FIRMWARE
   if test -e $FIRMWARE
   then
-    mv $FIRMWARE ${FIRMWARE}_`date +%F_%T`
+    mv $FIRMWARE ${BACKUP_DIR}/${FIRMWARE}_`date +%F_%T`
   fi 
 else
   echo Firmware file $FIRMWARE not found
   exit 1
 fi
+
+cd $WORKING_DIR
 
 echo Connect the left half and press reset twice.
 # wait until the drive for the nice nano it mounted
@@ -40,7 +56,7 @@ do
 done
 if test -e $LEFT_FILE 
 then
-  cp $LEFT_FILE /run/media/holloway/NICENANO/.
+  cp $LEFT_FILE $NICENANO_DIR
   echo done
 else
   echo firmware file for the right half not found
@@ -60,7 +76,7 @@ do
 done
 if test -e $RIGHT_FILE 
 then
-  cp $RIGHT_FILE /run/media/holloway/NICENANO/.
+  cp $RIGHT_FILE $NICENANO_DIR
   echo done
 else
   echo firmware file for the right half not found
