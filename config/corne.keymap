@@ -191,10 +191,10 @@
 // |         |     |     |     |       |     | ### |     |     |     |     |     |      |
 //                       |     | SPACE |     | ### |     |     |     |
                         bindings = <
-   &hm LALT TAB &trans  &trans  &trans  &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
-   &trans       &trans  &trans  &trans  &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
-   &trans       &trans  &trans  &trans  &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &kp SPACE  &sl GAME_LO      &trans  &trans  &trans
+   &hm LALT TAB &trans  &trans  &trans   &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
+   &trans       &trans  &trans  &trans   &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
+   &trans       &trans  &trans  &trans   &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
+                                &kp ESC  &kp SPACE  &sl GAME_LO      &trans  &trans  &trans
                         >;
                 };
                 game_lower_layer {
@@ -219,10 +219,10 @@
 // |  GUI  |  §  |     |        |  m_scj |     | ### |     |     |     |     |     |      |
 //                     | L GAME |  m_scj |     | ### |     |     |     |
                         bindings = <
-   &kp TAB   &kp N1     &kp N2  &kp N3     &kp N4   &kp N5      &trans  &trans  &trans  &trans  &trans  &trans
-   &kp LALT  &kp N6     &kp N7  &kp N8     &kp N9   &kp N0      &trans  &trans  &trans  &trans  &trans  &trans
-   &kp LGUI  &kp TILDE  &trans  &trans     &m_scj   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                                &to BASE   &trans   &to GAME    &trans  &trans  &trans
+   &kp TAB   &kp N1  &kp N2  &kp N3     &kp N4   &kp N5      &trans  &trans  &trans  &trans  &trans  &trans
+   &kp LALT  &kp N6  &kp N7  &kp N8     &kp N9   &kp N0      &trans  &trans  &trans  &trans  &trans  &trans
+   &kp LGUI  &kp F6  &trans  &trans     &m_scj   &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                             &to BASE   &trans   &to GAME    &trans  &trans  &trans
                         >;
                 };
         };
