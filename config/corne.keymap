@@ -64,26 +64,26 @@
             m_do: m_do {
                label = "M_DOMAIN";
                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
-                = <&kp DE_E  &kp N6  &kp DE_Z  &kp N9  &kp R  &kp DE_DOT  &kp N  &kp DE_E  &kp T>
-                ;
+               #binding-cells = <0>;
+               bindings
+               = <&kp DE_E  &kp N6  &kp DE_Z  &kp N9  &kp R  &kp DE_DOT  &kp N  &kp DE_E  &kp T>
+               ;
             };
             m_scj: m_scj {
                label = "M_SATIS_CROUCH_JUMP";
                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
-                = <&macro_press &kp C>
-                , <&macro_tap_time 300>
-                , <&macro_tap &kp SPACE>
-                , <&macro_wait_time 20>
-                , <&macro_release &kp C>
-                ;
+               #binding-cells = <0>;
+               bindings
+               = <&macro_press &kp C>
+               , <&macro_tap_time 300>
+               , <&macro_tap &kp SPACE>
+               , <&macro_wait_time 20>
+               , <&macro_release &kp C>
+               ;
             };
             m_bt_sd: m_bt_sd {
                label = "M_BT_SEL_AND_DISC";
-               compatible = "zmk,behavior-macro";
+               compatible = "zmk,behavior-macro-one-param";
                #binding-cells = <1>;
                bindings
                = <&macro_param_1to2>
@@ -97,7 +97,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                    label = "Base";
+                    display-name = "Base";
 // ---------------------------------------------------------------------------------------------
 // | ALT       |  Q  |  W  |  E  |  R  |  T  | ### |  Z  |  U   |  I  |  O  |  P  | CAPS_WORD  |
 // | TAB       |  A  |  S  |  D  |  F  |  G  | ### |  H  |  J   |  K  |  L  |  "  | sl SYMBOL  |
@@ -111,7 +111,7 @@
                         >;
                 };
                 symbols_layer {
-                    label = "Sym";
+                    display-name = "Sym";
 // ------------------------------------------------------------------------------
 // |    |  1  |  2  |  3  |  4  |  5  | ### |  6  |  7  |  8  |  9  |  0  |     |
 // |    |  ^  |  [  |  <  |  (  |  {  | ### |  /  |  *  |  +  |  =  |  '  |     |
@@ -125,7 +125,7 @@
                         >;
                 };
                 extra_layer {
-                    label = "Extra";
+                    display-name = "Extra";
 // -----------------------------------------------------------------------------------
 // |    |  1  |  ²  |  ³  |  4  |  5  | ### |  6  |  7  |  8  |  9  |  0           |     |
 // |    |  °  |  <  |  )  |  {  |  ]  | ### |  \  |  *  |  %  |  ~  |  `           |     |
@@ -139,7 +139,7 @@
                         >;
                 };
                 umlaut_layer {
-                    label = "Euro";
+                    display-name = "Euro";
 // --------------------------------------------------------------------------------
 // |   |  @  |  @  |  €  |     |     | ### |     |  ü  |     |  ö  |  §  |      |
 // |   |  ä  |  ß  |     |     |     | ### |     |     |     |     |     |      |
@@ -153,7 +153,7 @@
                         >;
                 };
                 navigation_layer {
-                    label = "Nav";
+                    display-name = "Nav";
 // ------------------------------------------------------------------------------------------
 // |   |     |     |     | M domain |          | ### | REDO | UNDO  | COPY | CUT | PAST      |      |
 // |   |     |     |     |          |          | ### |   <  |  v    |  ^   |  >  | TAB       |      |
@@ -167,7 +167,7 @@
                         >;
                 };
                 function_layer {
-                    label = "Func";
+                    display-name = "Func";
 // --------------------------------------------------------------------------------
 // |   |  F1   |  F2   |  F3  | F4    |  F5   | ### |  F6       |  F7  |  F8   |  F9  |  F10  |      |
 // |   |  F11  |  F12  |      |       |       | ### |           |      |       |      |       |      |
@@ -181,7 +181,7 @@
                         >;
                 };
                 system_layer {
-                    label = "Corne";
+                    display-name = "Corne";
 // -----------------------------------------------------------------------------------------
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | ### |     |     |     |     |      |
 // |      |     |     |     |     |     |   | ### |     |     |     |     |      |
@@ -195,7 +195,7 @@
                         >;
                 };
                 game_layer {
-                    label = "Game";
+                    display-name = "Game";
 // -----------------------------------------------------------------------------------------
 // |  TAB    |     |     |     |       |     | ### |     |     |     |     |     |      |
 // |  M_SCJ  |  A  |  S  |  D  |  F    |  G  | ### |     |     |     |     |     |      |
@@ -209,7 +209,7 @@
                         >;
                 };
                 game_lower_layer {
-                    label = "GL";
+                    display-name = "GL";
 // -----------------------------------------------------------------------------------------
 // |  TAB  |     |     |        |        |     | ### |     |     |     |     |     |      |
 // |  ALT  |  A  |  S  |  D     |  F     |  G  | ### |     |     |     |     |     |      |
@@ -223,7 +223,7 @@
                         >;
                 };
                 game_higher_layer {
-                    label = "GH";
+                    display-name = "GH";
 // -----------------------------------------------------------------------------------------
 // |  TAB  |  1  |  2  |  3     |  4     |  5  | ### |     |     |     |     |     |      |
 // |  ALT  |  6  |  7  |  8     |  9     |  0  | ### |     |     |     |     |     |      |
