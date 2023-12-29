@@ -37,7 +37,7 @@
         behaviors {
             hs: home_row_mod_shift {
                   compatible = "zmk,behavior-hold-tap";
-                  label = "HOMEROW_MOD_SHIFT";
+                  display-name = "HOMEROW_MOD_SHIFT";
                   #binding-cells = <2>;
                   tapping-term-ms = <150>;
                   flavor = "tap-preferred";
@@ -45,7 +45,7 @@
             };
             hm: home_row_mods {
                   compatible = "zmk,behavior-hold-tap";
-                  label = "HOMEROW_MODS";
+                  display-name = "HOMEROW_MODS";
                   #binding-cells = <2>;
                   tapping-term-ms = <210>;
                   quick-tap-ms = <0>;
@@ -54,7 +54,7 @@
             };
             sm: hold_tap_sk_mo {
                   compatible = "zmk,behavior-hold-tap";
-                  label = "HOLD_TAP_SK_MO";
+                  display-name = "HOLD_TAP_SK_MO";
                   #binding-cells = <2>;
                   tapping-term-ms = <300>;
                   bindings = <&mo>, <&sk>;
@@ -62,7 +62,7 @@
         };
         macros {
             m_do: m_do {
-               label = "M_DOMAIN";
+               display-name = "M_DOMAIN";
                compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
@@ -70,7 +70,7 @@
                 ;
             };
             m_scj: m_scj {
-               label = "M_SATIS_CROUCH_JUMP";
+               display-name = "M_SATIS_CROUCH_JUMP";
                compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
@@ -82,21 +82,22 @@
                 ;
             };
             m_bt_sd: m_bt_sd {
-              label = "M_BT_SEL_AND_DISC";
-              #binding-cells = <1>;
-              binding
-              = <&macro_param_1to2>
-              , <&bt BT_SEL MACRO_PLACEHOLDER>
-              , <&macro_wait_time 200>
-              , <&bt BT_DISC 4>
-              ;
+               display-name = "M_BT_SEL_AND_DISC";
+               compatible = "zmk,behavior-macro";
+               #binding-cells = <1>;
+               bindings
+               = <&macro_param_1to2>
+               , <&bt BT_SEL MACRO_PLACEHOLDER>
+               , <&macro_wait_time 200>
+               , <&bt BT_DISC 4>
+               ;
             };
         };
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-                    label = "Base";
+                    display-name = "Base";
 // ---------------------------------------------------------------------------------------------
 // | ALT       |  Q  |  W  |  E  |  R  |  T  | ### |  Z  |  U   |  I  |  O  |  P  | CAPS_WORD  |
 // | TAB       |  A  |  S  |  D  |  F  |  G  | ### |  H  |  J   |  K  |  L  |  "  | sl SYMBOL  |
@@ -110,7 +111,7 @@
                         >;
                 };
                 symbols_layer {
-                    label = "Sym";
+                    display-name = "Sym";
 // ------------------------------------------------------------------------------
 // |    |  1  |  2  |  3  |  4  |  5  | ### |  6  |  7  |  8  |  9  |  0  |     |
 // |    |  ^  |  [  |  <  |  (  |  {  | ### |  /  |  *  |  +  |  =  |  '  |     |
@@ -124,7 +125,7 @@
                         >;
                 };
                 extra_layer {
-                    label = "Extra";
+                    display-name = "Extra";
 // -----------------------------------------------------------------------------------
 // |    |  1  |  ²  |  ³  |  4  |  5  | ### |  6  |  7  |  8  |  9  |  0           |     |
 // |    |  °  |  <  |  )  |  {  |  ]  | ### |  \  |  *  |  %  |  ~  |  `           |     |
@@ -138,7 +139,7 @@
                         >;
                 };
                 umlaut_layer {
-                    label = "Euro";
+                    display-name = "Euro";
 // --------------------------------------------------------------------------------
 // |   |  @  |  @  |  €  |     |     | ### |     |  ü  |     |  ö  |  §  |      |
 // |   |  ä  |  ß  |     |     |     | ### |     |     |     |     |     |      |
@@ -152,7 +153,7 @@
                         >;
                 };
                 navigation_layer {
-                    label = "Nav";
+                    display-name = "Nav";
 // ------------------------------------------------------------------------------------------
 // |   |     |     |     | M domain |          | ### | REDO | UNDO  | COPY | CUT | PAST      |      |
 // |   |     |     |     |          |          | ### |   <  |  v    |  ^   |  >  | TAB       |      |
@@ -166,7 +167,7 @@
                         >;
                 };
                 function_layer {
-                    label = "Func";
+                    display-name = "Func";
 // --------------------------------------------------------------------------------
 // |   |  F1   |  F2   |  F3  | F4    |  F5   | ### |  F6       |  F7  |  F8   |  F9  |  F10  |      |
 // |   |  F11  |  F12  |      |       |       | ### |           |      |       |      |       |      |
@@ -180,7 +181,7 @@
                         >;
                 };
                 system_layer {
-                    label = "Corne";
+                    display-name = "Corne";
 // -----------------------------------------------------------------------------------------
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | ### |     |     |     |     |      |
 // |      |     |     |     |     |     |   | ### |     |     |     |     |      |
@@ -194,7 +195,7 @@
                         >;
                 };
                 game_layer {
-                    label = "Game";
+                    display-name = "Game";
 // -----------------------------------------------------------------------------------------
 // |  TAB    |     |     |     |       |     | ### |     |     |     |     |     |      |
 // |  M_SCJ  |  A  |  S  |  D  |  F    |  G  | ### |     |     |     |     |     |      |
@@ -208,7 +209,7 @@
                         >;
                 };
                 game_lower_layer {
-                    label = "GL";
+                    display-name = "GL";
 // -----------------------------------------------------------------------------------------
 // |  TAB  |     |     |        |        |     | ### |     |     |     |     |     |      |
 // |  ALT  |  A  |  S  |  D     |  F     |  G  | ### |     |     |     |     |     |      |
@@ -222,7 +223,7 @@
                         >;
                 };
                 game_higher_layer {
-                    label = "GH";
+                    display-name = "GH";
 // -----------------------------------------------------------------------------------------
 // |  TAB  |  1  |  2  |  3     |  4     |  5  | ### |     |     |     |     |     |      |
 // |  ALT  |  6  |  7  |  8     |  9     |  0  | ### |     |     |     |     |     |      |
