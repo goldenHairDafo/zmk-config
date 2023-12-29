@@ -81,6 +81,16 @@
                 , <&macro_release &kp C>
                 ;
             };
+            m_bt_sd: m_bt_sd {
+              label = "M_BT_SEL_AND_DISC";
+              #binding-cells = <1>;
+              binding
+              = <&macro_param_1to2>
+              , <&bt BT_SEL MACRO_PLACEHOLDER>
+              , <&macro_wait_time 200>
+              , <&bt BT_DISC 4>
+              ;
+            };
         };
         keymap {
                 compatible = "zmk,keymap";
@@ -177,7 +187,7 @@
 // |      |     |     |     |     |     |   | ### |     |     |     |     |      |
 //                    |     |     |     |   | ### |     |     |
                         bindings = <
-   &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4       &out OUT_BLE  &out OUT_USB  &trans  &trans  &trans  &ext_power EP_TOG
+   &bt BT_CLR   &m_bt_sd 0    &m_bt_sd 1    &m_bt_sd 2    &m_bt_sd 3    &bt BT_SEL 4       &out OUT_BLE  &out OUT_USB  &trans  &trans  &trans  &ext_power EP_TOG
    &trans       &trans        &trans        &trans        &trans        &trans             &trans        &trans        &trans  &trans  &trans  &trans
    &bootloader  &trans        &trans        &trans        &trans        &trans             &trans        &trans        &trans  &trans  &trans  &bootloader
                                             &trans        &trans        &trans             &trans        &trans        &trans
