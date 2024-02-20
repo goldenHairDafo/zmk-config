@@ -216,9 +216,9 @@
 // |  GUI  |     |     |        |  M     |  N  | ### |     |     |     |     |     |      |
 //                     | L GAME |  m_scj |     | ### |     |     |     |
                         bindings = <
-   &kp TAB   &kp DE_Z  &kp U   &kp I         &kp O       &kp P             &trans  &trans  &trans  &trans  &trans  &trans
-   &kp LALT  &kp H     &kp J   &kp K         &kp L       &kp DE_DQT        &trans  &trans  &trans  &trans  &trans  &trans
-   &kp LGUI  &kp N     &kp M   &kp DE_COMMA  &kp DE_DOT  &kp DE_MINUS      &trans  &trans  &trans  &trans  &trans  &trans
+   &kp TAB   &kp DE_Z  &kp U   &kp I         &kp O       &kp P             &kp LC(R)  &kp LC(DE_Z)  &kp LC(INS)  &kp LS(DEL)  &kp LS(INS) &trans
+   &kp LALT  &kp H     &kp J   &kp K         &kp L       &kp DE_DQT        &kp LEFT   &kp DOWN      &kp UP       &kp RIGHT    &kp TAB     &trans
+   &kp LGUI  &kp N     &kp M   &kp DE_COMMA  &kp DE_DOT  &kp DE_MINUS      &kp HOME   &kp PG_DN     &kp PG_UP    &kp END      &caps_word  &trans
                                &to BASE      &trans      &sl GAME_HI       &trans  &trans  &trans
                         >;
                 };
