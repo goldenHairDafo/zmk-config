@@ -88,7 +88,7 @@
                bindings 
                = <&macro_tap &kp LC(LS(F12))>
                , <&macro_wait_time 50>
-               , <&macro_tap &kp LG(6)>
+               , <&macro_tap &kp LG(N6)>
                ;
             };
             m_bt_sd: m_bt_sd {
