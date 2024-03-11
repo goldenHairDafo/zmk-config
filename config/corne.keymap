@@ -89,6 +89,7 @@
                = <&macro_press &kp LC(LS(F12))>
                , <&macro_wait_time 30>
                , <&macro_release &kp LG(6)>
+               ;
             };
             m_bt_sd: m_bt_sd {
                // label = "M_BT_SEL_AND_DISC";
