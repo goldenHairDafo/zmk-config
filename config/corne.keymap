@@ -36,8 +36,8 @@
 / {
         behaviors {
             hs: home_row_mod_shift {
+                  //label = "HOMEROW_MOD_SHIFT";
                   compatible = "zmk,behavior-hold-tap";
-                  label = "HOMEROW_MOD_SHIFT";
                   #binding-cells = <2>;
                   tapping-term-ms = <150>;
                   flavor = "tap-preferred";
@@ -62,7 +62,7 @@
         };
         macros {
             m_do: m_do {
-               label = "M_DOMAIN";
+               // label = "M_DOMAIN";
                compatible = "zmk,behavior-macro";
                #binding-cells = <0>;
                bindings
@@ -70,7 +70,7 @@
                ;
             };
             m_scj: m_scj {
-               label = "M_SATIS_CROUCH_JUMP";
+               // label = "M_SATIS_CROUCH_JUMP";
                compatible = "zmk,behavior-macro";
                #binding-cells = <0>;
                bindings
@@ -82,13 +82,13 @@
                ;
             };
             m_wcp: m_wcp {
-               label = "M_W_CHANGE_PHONE";
+               // label = "M_W_CHANGE_PHONE";
                compatible = "zmk,behavior-macro";
                #binding-cells = <0>;
-               bindings = <&kp LC(LS(F12))  &kp LGUI(6)>;
+               bindings = <&kp LC(LS(F12))  &kp LG(6)>;
             };
             m_bt_sd: m_bt_sd {
-               label = "M_BT_SEL_AND_DISC";
+               // label = "M_BT_SEL_AND_DISC";
                compatible = "zmk,behavior-macro-one-param";
                #binding-cells = <1>;
                bindings
