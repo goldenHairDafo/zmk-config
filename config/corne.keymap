@@ -117,10 +117,10 @@
 // | sl UMLAUT |  Y  |  X  |  C  |  V  |  B  | ### |  N  |  M   |  ,  |  .  |  -  | sl UMLAUT  |
 //                         | BSP | SPC | LSH | ### | LCT | RET  | ESC |
                         bindings = <
-   &sk LALT    &kp DE_Q         &kp W  &kp DE_E      &kp R        &kp T    &kp DE_Z    &kp U         &kp I          &kp O        &kp P                &sk LALT
-   &sk LSHIFT  &kp A            &kp S  &kp D         &kp F        &kp G    &kp H       &kp J         &kp K          &kp L        &kp DE_DQT           &sk RSHFT
-   &sk LCTRL   &lt UMLAUT DE_Y  &kp X  &kp C         &kp V        &kp B    &kp N       &hm RALT M    &kp DE_COMMA   &kp DE_DOT   &lt UMLAUT DE_MINUS  &sk RCTRL
-                                       &hm LGUI ESC  &kp SPACE    &mo NAV  &sl SYMBOL  &lt FUNC RET  &hm LGUI BSPC
+   &sk LALT    &kp DE_Q         &kp W  &kp DE_E      &kp R        &kp T          &kp DE_Z    &kp U         &kp I          &kp O        &kp P                &sk LALT
+   &sk LSHIFT  &kp A            &kp S  &kp D         &kp F        &kp G          &kp H       &kp J         &kp K          &kp L        &kp DE_DQT           &sk RSHFT
+   &sk LCTRL   &lt UMLAUT DE_Y  &kp X  &kp C         &kp V        &kp B          &kp N       &hm RALT M    &kp DE_COMMA   &kp DE_DOT   &lt UMLAUT DE_MINUS  &sk RCTRL
+                                       &hm LGUI ESC  &kp SPACE    &mo NAV        &sl SYMBOL  &lt FUNC RET  &hm LGUI BSPC
                         >;
                 };
                 symbols_layer {
@@ -145,10 +145,10 @@
 // |    |  §  |  >  |  )  |  }  |  ]  | ### |  €  |  µ  |  |  |  ?  |  ScrollLock  |     |
 //                  | BSP | SPC | LSH | ### | LCT | RET | ESC |
                         bindings = <
-   &trans  &kp N1       &kp DE_SQUARE &kp DE_CUBE  &kp N4       &kp N5           &kp N6       &kp N7       &kp N8        &kp N9        &kp N0        &trans
-   &trans  &kp DE_DEG   &kp DE_GT     &kp DE_RPAR  &kp DE_RBRC  &kp DE_RBKT      &kp DE_BSLH  &kp DE_STAR  &kp DE_PRCNT  &kp DE_TILDE  &kp DE_GRAVE  &trans
-   &trans  &kp DE_SECT  &kp DE_GT     &kp DE_RPAR  &kp DE_RBRC  &kp DE_RBKT      &kp DE_EURO  &kp DE_AMPS  &kp DE_PIPE   &kp DE_QMARK  &kp SLCK      &trans
-                                      &trans       &trans       &trans           &trans       &trans       &trans
+   &trans  &kp N1       &kp DE_SQUARE &kp DE_CUBE  &kp N4       &kp N5             &kp N6       &kp N7       &kp N8        &kp N9        &kp N0        &trans
+   &trans  &kp DE_DEG   &kp DE_GT     &kp DE_RPAR  &kp DE_RBRC  &kp DE_RBKT        &kp DE_BSLH  &kp DE_STAR  &kp DE_PRCNT  &kp DE_TILDE  &kp DE_GRAVE  &trans
+   &trans  &kp DE_SECT  &kp DE_GT     &kp DE_RPAR  &kp DE_RBRC  &kp DE_RBKT        &kp DE_EURO  &kp DE_AMPS  &kp DE_PIPE   &kp DE_QMARK  &kp SLCK      &trans
+                                      &trans       &trans       &trans             &trans       &trans       &trans
                         >;
                 };
                 umlaut_layer {
@@ -187,10 +187,10 @@
 // |   |       |       |      |       |       | ### |  Hyper    |  MEH |       |      |       |      |
 //                     | BSP  | SPC   |  LSH  | ### |  LCT      | RET  | ESC   |
                         bindings = <
-   &trans   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                &kp F6     &kp F7   &kp F8   &kp F9  &kp F10  &trans
-   &trans   &kp F11  &kp F12  &kp F13  &kp F14  &kp F15               &mmv MOVE_LEFT     &mmv MOVE_DOWN   &mmv MOVE_UP   &mmv MOVE_RIGHT  &msc SCRL_UP   &trans
-   &trans   &trans   &mkp LCLK   &mkp MCLK   &mkp RCLK   &mkp MB4     &sk HYPER  &sk MEH  &trans   &trans  &msc SCRL_DOWN   &trans
-                              &trans   &trans   &trans                &trans     &trans  &trans
+   &trans   &kp F1   &kp F2     &kp F3     &kp F4     &kp F5          &kp F6          &kp F7          &kp F8         &kp F9           &kp F10         &trans
+   &trans   &kp F11  &kp F12    &kp F13    &kp F14    &kp F15         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP   &mmv MOVE_RIGHT  &msc SCRL_UP    &trans
+   &trans   &trans   &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4        &sk HYPER       &sk MEH         &trans         &trans           &msc SCRL_DOWN  &trans
+                                &trans     &trans     &trans          &trans          &trans          &trans
                         >;
                 };
                 system_layer {
@@ -201,10 +201,10 @@
 // |      |     |     |     |     |     |   | ### |     |     |     |     |      |
 //                    |     |     |     |   | ### |     |     |
                         bindings = <
-   &bt BT_CLR   &m_bt_sd 0    &m_bt_sd 1    &m_bt_sd 2    &m_bt_sd 3    &bt BT_SEL 4       &out OUT_BLE  &out OUT_USB  &studio_unlock  &trans  &trans  &ext_power EP_TOG
-   &trans       &trans        &trans        &trans        &trans        &trans             &trans        &trans        &trans          &trans  &trans  &trans
-   &bootloader  &trans        &trans        &trans        &trans        &trans             &trans        &trans        &trans          &trans  &trans  &bootloader
-                                            &trans        &trans        &trans             &trans        &trans        &trans
+   &bt BT_CLR   &m_bt_sd 0    &m_bt_sd 1    &m_bt_sd 2    &m_bt_sd 3    &bt BT_SEL 4           &out OUT_BLE  &out OUT_USB  &studio_unlock  &trans  &trans  &ext_power EP_TOG
+   &trans       &trans        &trans        &trans        &trans        &trans                 &trans        &trans        &trans          &trans  &trans  &trans
+   &bootloader  &trans        &trans        &trans        &trans        &trans                 &trans        &trans        &trans          &trans  &trans  &bootloader
+                                            &trans        &trans        &trans                 &trans        &trans        &trans
                         >;
                 };
                 game_layer {
@@ -243,21 +243,21 @@
 // |  GUI  |  §  |     |        |  m_scj |     | ### |     |     |     |     |     |      |
 //                     | L GAME |  m_scj |     | ### |     |     |     |
                         bindings = <
-   &kp TAB   &kp N1  &kp N2  &kp N3     &kp N4   &kp N5      &trans  &trans  &trans  &trans  &trans  &trans
-   &kp LALT  &kp N6  &kp N7  &kp N8     &kp N9   &kp N0      &trans  &trans  &trans  &trans  &trans  &trans
-   &kp LGUI  &kp F6  &trans  &trans     &m_scj   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                             &to BASE   &trans   &to GAME    &trans  &trans  &trans
+   &kp TAB   &kp N1  &kp N2  &kp N3     &kp N4   &kp N5          &trans  &trans  &trans  &trans  &trans  &trans
+   &kp LALT  &kp N6  &kp N7  &kp N8     &kp N9   &kp N0          &trans  &trans  &trans  &trans  &trans  &trans
+   &kp LGUI  &kp F6  &trans  &trans     &m_scj   &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                             &to BASE   &trans   &to GAME        &trans  &trans  &trans
                         >;
                 };
         };
 };
 
-// TODOs
-// [ ] Media Key Layer
+// TODO:
 // [ ] Mouse Assist Layer
-// [ ] Gaming Layer
+// [-] Mouse Movement Layer (now supported by zmk, but not working correctly)
+// [x] Media Key Layer
+// [x] Gaming Layer
 // [x] Navigration Layer
-// [-] Mouse Movement Layer (not supported by zmk at the moment)
 // [x] Function Key Layer
 // [x] Macro for domain name
 // [x] Fix System Layer
