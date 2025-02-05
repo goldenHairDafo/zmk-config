@@ -173,8 +173,8 @@
 // |   |     |     |     | L GAME   | L System | ### | HOME | PDOWN | PUP  | END | CAPS_WORD |      |
 //                 |     |          |          | ### |      |       |      |
                         bindings = <
-   &trans   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &m_do      &trans             &kp LC(R)  &kp LC(DE_Z)  &kp LC(INS)  &kp LS(DEL)  &kp LS(INS)  &trans
-   &trans   &kp K_MUTE  &kp K_VOL_DN  &kp K_VOL_UP  &trans     &m_wcp             &kp LEFT   &kp DOWN      &kp UP       &kp RIGHT    &kp TAB      &trans
+   &C_AL_WWW   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &m_do      &trans             &kp LC(R)  &kp LC(DE_Z)  &kp LC(INS)  &kp LS(DEL)  &kp LS(INS)  &trans
+   &K_WWW   &kp K_MUTE  &kp K_VOL_DN  &kp K_VOL_UP  &trans     &m_wcp             &kp LEFT   &kp DOWN      &kp UP       &kp RIGHT    &kp TAB      &trans
    &trans   &trans  &trans  &trans  &tog GAME  &sl SYSTEM         &kp HOME   &kp PG_DN     &kp PG_UP    &kp END      &caps_word   &trans
                             &trans  &trans     &trans             &trans     &trans        &trans
                         >;
@@ -189,7 +189,7 @@
                         bindings = <
    &trans   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5           &kp F6     &kp F7   &kp F8   &kp F9  &kp F10  &trans
    &trans   &kp F11  &kp F12  &kp F13  &kp F14  &kp F15          &mmv MOVE_LEFT     &mmv MOVE_DOWN   &mmv MOVE_UP   &mmv MOVE_RIGHT  &msc SCRL_UP   &trans
-   &trans   &trans   &mkp MB1   &mkp MB2   &mpk MB3   &trans     &sk HYPER  &sk MEH  &trans   &trans  &msc SCRL_DOWN   &trans
+   &trans   &trans   &mkp MB1   &mkp MB2   &mkp MB3   &trans     &sk HYPER  &sk MEH  &trans   &trans  &msc SCRL_DOWN   &trans
                               &trans   &trans   &trans           &trans     &trans  &trans
                         >;
                 };
