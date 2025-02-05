@@ -173,8 +173,8 @@
 // |   |     |     |     | L GAME   | L System | ### | HOME | PDOWN | PUP  | END | CAPS_WORD |      |
 //                 |     |          |          | ### |      |       |      |
                         bindings = <
-   &C_AL_WWW   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &m_do      &trans             &kp LC(R)  &kp LC(DE_Z)  &kp LC(INS)  &kp LS(DEL)  &kp LS(INS)  &trans
-   &K_WWW   &kp K_MUTE  &kp K_VOL_DN  &kp K_VOL_UP  &trans     &m_wcp             &kp LEFT   &kp DOWN      &kp UP       &kp RIGHT    &kp TAB      &trans
+   &kp C_AL_WWW   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &m_do      &trans             &kp LC(R)  &kp LC(DE_Z)  &kp LC(INS)  &kp LS(DEL)  &kp LS(INS)  &trans
+   &kp K_WWW   &kp K_MUTE  &kp K_VOL_DN  &kp K_VOL_UP  &trans     &m_wcp             &kp LEFT   &kp DOWN      &kp UP       &kp RIGHT    &kp TAB      &trans
    &trans   &trans  &trans  &trans  &tog GAME  &sl SYSTEM         &kp HOME   &kp PG_DN     &kp PG_UP    &kp END      &caps_word   &trans
                             &trans  &trans     &trans             &trans     &trans        &trans
                         >;
