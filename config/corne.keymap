@@ -173,10 +173,10 @@
 // |   |     |     |     | L GAME   | L System | ### | HOME | PDOWN | PUP  | END | CAPS_WORD |      |
 //                 |     |          |          | ### |      |       |      |
                         bindings = <
-   &kp C_AL_CONTROL_PANEL   &kp K_MUTE2  &kp C_BRI_DEC &kp C_BRI_INC &m_do      &trans            &kp LC(R)  &kp LC(DE_Z)  &kp LC(INS)  &kp LS(DEL)  &kp LS(INS)  &trans
-   &kp C_AL_TEXT_EDITOR     &kp K_MUTE   &kp C_VOL_DN  &kp C_VOL_UP  &trans     &m_wcp            &kp LEFT   &kp DOWN      &kp UP       &kp RIGHT    &kp TAB      &trans
-   &kp C_AL_FILES           &trans       &trans        &trans        &tog GAME  &sl SYSTEM        &kp HOME   &kp PG_DN     &kp PG_UP    &kp END      &caps_word   &trans
-                                         &trans        &trans        &trans                       &trans     &trans        &trans
+   &kp C_AL_CONTROL_PANEL   &kp C_BASS_BOSST  &kp C_BRI_DEC &kp C_BRI_INC &m_do      &trans            &kp LC(R)  &kp LC(DE_Z)  &kp LC(INS)  &kp LS(DEL)  &kp LS(INS)  &trans
+   &kp C_AL_TEXT_EDITOR     &kp K_MUTE        &kp C_VOL_DN  &kp C_VOL_UP  &trans     &m_wcp            &kp LEFT   &kp DOWN      &kp UP       &kp RIGHT    &kp TAB      &trans
+   &kp C_AL_FILES           &kp C_PP          &kp C_PREV    &kp C_NEXT    &tog GAME  &sl SYSTEM        &kp HOME   &kp PG_DN     &kp PG_UP    &kp END      &caps_word   &trans
+                                              &trans        &trans        &trans                       &trans     &trans        &trans
                         >;
                 };
                 function_layer {
