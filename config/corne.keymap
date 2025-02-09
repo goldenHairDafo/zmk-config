@@ -201,10 +201,10 @@
 // |      |     |     |     |     |     |   | ### |     |     |     |     |      |
 //                    |     |     |     |   | ### |     |     |
                         bindings = <
-   &bt BT_CLR   &m_bt_sd 0    &m_bt_sd 1    &m_bt_sd 2    &m_bt_sd 3    &bt BT_SEL 4           &out OUT_BLE  &out OUT_USB  &studio_unlock  &trans  &trans  &ext_power EP_TOG
-   &trans       &trans        &trans        &trans        &trans        &trans                 &kp C_SLEEP   &kp C_POWER   &kp C_AL_LOCK   &trans  &trans  &trans
-   &bootloader  &trans        &trans        &trans        &trans        &trans                 &trans        &trans        &trans          &trans  &trans  &bootloader
-                                            &trans        &trans        &trans                 &trans        &trans        &trans
+   &bt BT_CLR   &m_bt_sd 0    &m_bt_sd 1    &m_bt_sd 2    &m_bt_sd 3    &bt BT_SEL 4           &out OUT_BLE   &out OUT_USB  &studio_unlock  &trans  &trans  &ext_power EP_TOG
+   &trans       &trans        &trans        &trans        &trans        &trans                 &kp C_AL_LOCK  &kp C_POWER   &kp C_SLEEP     &trans  &trans  &trans
+   &bootloader  &trans        &trans        &trans        &trans        &trans                 &trans         &trans        &trans          &trans  &trans  &bootloader
+                                            &trans        &trans        &trans                 &trans         &trans        &trans
                         >;
                 };
                 game_layer {
