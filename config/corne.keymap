@@ -33,6 +33,9 @@
 &sl {
     release-after-ms = <5000>;
 };
+&caps_word {
+  continue-list = <UNDERSCORE MINUS>;
+};
 
 / {
         behaviors {
@@ -105,9 +108,6 @@
                , <&bt BT_DISC 4>
                ;
             };
-        };
-        &caps_word {
-          continue-list = <UNDERSCORE MINUS>;
         };
         keymap {
                 compatible = "zmk,keymap";
