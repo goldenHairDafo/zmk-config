@@ -34,7 +34,7 @@
     release-after-ms = <5000>;
 };
 &caps_word {
-  continue-list = <UNDERSCORE MINUS>;
+  continue-list = <DE_MINUS BSPC DEL>;
 };
 
 / {
